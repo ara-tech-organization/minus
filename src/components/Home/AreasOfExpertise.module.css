@@ -1,0 +1,425 @@
+.expertiseSection {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.mainTitle {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.italicText {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #999;
+    font-weight: 400;
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Menu Styles */
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 280px;
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 24px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.menuItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menuItem:hover::before {
+    opacity: 1;
+}
+
+.menuItem:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(8px);
+}
+
+.menuItem.active {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    transform: translateX(12px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+}
+
+.menuItem.active::before {
+    opacity: 0;
+}
+
+.menuIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.menuLabel {
+    flex: 1;
+}
+
+/* Right Content Card Styles */
+.contentCard {
+    flex: 1;
+    background: #fff;
+    border-radius: 24px;
+    padding: 48px;
+    animation: fadeInRight 0.6s ease-out, slideInRight 0.6s ease-out;
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.contentCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    /* background: linear-gradient(90deg, #4CAF50, #8BC34A); */
+    animation: slideWidth 0.6s ease-out;
+}
+
+.cardInner {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+.textContent {
+    flex: 1;
+    color: #000;
+}
+
+.contentTitle {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.contentDescription {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.benefitItem:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.benefitItem:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.benefitItem:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.checkIcon {
+    color: #1a1a2e;
+    flex-shrink: 0;
+}
+
+.ctaButton {
+    background-color: #1a1a2e;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.ctaButton:hover {
+    background-color: #0f0f1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 26, 46, 0.3);
+}
+
+.ctaButton:active {
+    transform: translateY(0);
+}
+
+.imageContent {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.8s ease-out 0.3s both, scaleIn 0.8s ease-out 0.3s both;
+}
+
+.contentImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(60px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideWidth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+    }
+
+ .menuList {
+     flex-direction: row;
+     flex-wrap: wrap;
+     width: 100%;
+     min-width: auto;
+     gap: 12px;
+     justify-content: center;
+ }
+
+    .menuItem {
+        white-space: nowrap;
+    }
+
+    .menuItem:hover,
+    .menuItem.active {
+        transform: translateY(-4px);
+    }
+
+    .cardInner {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .contentCard {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .expertiseSection {
+        padding: 60px 20px;
+    }
+
+    .mainTitle {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .menuList {
+        gap: 12px;
+    }
+
+    .menuItem {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .contentTitle {
+        font-size: 26px;
+    }
+
+    .contentDescription {
+        font-size: 14px;
+    }
+
+    .contentCard {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertiseSection {
+        padding: 40px 16px;
+    }
+
+    .mainTitle {
+        font-size: 28px;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .menuItem {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+
+    .contentTitle {
+        font-size: 22px;
+    }
+
+    .benefitItem {
+        font-size: 13px;
+    }
+
+    .ctaButton {
+        width: 100%;
+        padding: 14px 28px;
+    }
+}

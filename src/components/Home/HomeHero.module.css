@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-container {
+    min-height: 100vh;
+    background-color: #f5f3f0;
+    padding: 60px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding-top: 40px;
+}
+
+.left-content {
+    flex: 1;
+    max-width: 540px;
+}
+
+.clinic-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    animation: fadeInDown 0.6s ease-out;
+    margin-top: 100px;
+    border:1px solid #E2E8F0;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.bullet {
+    color: #000;
+    font-size: 15px;
+}
+
+.badge-text {
+    
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #000;
+}
+
+.main-heading {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+    margin-bottom: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.sub-heading {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #7a8fa8;
+    margin-bottom: 32px;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.italic-text {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #5a5a5a;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.cta-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 18px 36px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.cta-button:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.services-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 18px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.services-button:hover {
+    transform: translateX(4px);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.services-button:hover .arrow-icon {
+    transform: translateY(2px);
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    animation: fadeIn 1s ease-out 0.4s both;
+}
+
+.image-card {
+    top: 100px;
+    position: relative;
+    border-radius: 24px;
+    overflow: visible;
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(135deg, #1a4d4d 0%, #2d6b6b 100%);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.success-badge {
+    position: absolute;
+    bottom: 0px;
+    left: -24px;
+    background-color: rgba(255, 255, 255, 0.834);
+    padding: 20px 28px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
+    animation: slideInLeft 0.6s ease-out 0.8s both;
+    z-index: 999;
+}
+
+.badge-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.badge-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8a8a8a;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-container {
+        padding: 40px 60px;
+    }
+
+    .content-wrapper {
+        gap: 60px;
+    }
+
+    .main-heading,
+    .sub-heading {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 968px) {
+    .hero-container {
+        padding: 40px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .left-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clinic-badge {
+        justify-content: center;
+    }
+
+    .main-heading,
+    .sub-heading {
+        font-size: 52px;
+    }
+
+    .button-group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .right-content {
+        justify-content: center;
+    }
+
+    .image-card {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-container {
+        padding: 24px;
+    }
+
+    .main-heading,
+    .sub-heading {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-button,
+    .services-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .image-card {
+        max-width: 100%;
+        top: 0px;
+    }
+
+    .success-badge {
+        bottom: 24px;
+        left: 24px;
+        padding: 16px 20px;
+        display: none;
+    }
+
+    .badge-number {
+        font-size: 28px;
+    }
+}

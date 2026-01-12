@@ -1,0 +1,286 @@
+.container {
+    padding: 80px 60px;
+    background: #f8f8f8;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+}
+
+.header {
+    max-width: 1400px;
+    margin: 0 auto 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 24px;
+}
+
+.titleSection {
+    flex: 1;
+    
+}
+
+.title {
+   
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+.titleItalic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+}
+
+.arrowButton {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.arrowButton:hover:not(:disabled) {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.arrowButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.arrowButton:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.carouselWrapper {
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+   
+    padding-left: 24px;
+    
+}
+.carousel {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card {
+    flex-shrink: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease-out backwards;
+    position: relative;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardDouble {
+    width: 380px;
+}
+
+.cardSingle {
+    width: 400px;
+}
+
+.doubleImageWrapper {
+    display: flex;
+    height: 400px;
+}
+
+.imageContainer {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.singleImageWrapper {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2d3e50 0%, #1a252f 100%);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.cardContent {
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+}
+
+.patientName {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: #fff;
+    letter-spacing: 0.3px;
+}
+
+.treatment {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 1400px) {
+    .cardDouble {
+        width: 340px;
+    }
+
+    .cardSingle {
+        width: 360px;
+    }
+
+    .doubleImageWrapper,
+    .singleImageWrapper {
+        height: 360px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 60px 40px;
+    }
+
+    .carousel {
+        gap: 20px;
+    }
+
+    .cardDouble {
+        width: 300px;
+    }
+
+    .cardSingle {
+        width: 320px;
+    }
+
+    .doubleImageWrapper,
+    .singleImageWrapper {
+        height: 340px;
+    }
+}
+
+@media (max-width: 968px) {
+    .container {
+        padding: 40px 24px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardDouble,
+    .cardSingle {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .doubleImageWrapper,
+    .singleImageWrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 32px 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .controls {
+        gap: 8px;
+    }
+
+    .arrowButton {
+        width: 44px;
+        height: 44px;
+    }
+
+    .cardContent {
+        padding: 20px;
+    }
+
+    .patientName {
+        font-size: 15px;
+    }
+
+    .treatment {
+        font-size: 12px;
+    }
+}

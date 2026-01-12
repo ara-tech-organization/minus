@@ -1,0 +1,437 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 4rem;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Decorative Elements */
+.decorCircle {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.decorLine {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: #fff;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.badgeDot {
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+}
+
+/* Headline */
+.headline {
+    font-size: clamp(3rem, 12vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin: 0 0 2rem 0;
+    letter-spacing: -0.03em;
+}
+
+.headlineTop {
+    display: block;
+    font-size: 0.4em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out 0.2s forwards;
+}
+
+.headlineMain {
+    display: block;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+/* .headlineMain::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 8px;
+    background: #fff;
+    animation: expandWidth 1s ease-out 1s forwards;
+} */
+
+.headlineBottom {
+    display: block;
+    font-style: italic;
+    margin-left: 15%;
+    opacity: 0;
+    animation: fadeInRight 0.8s ease-out 0.6s forwards;
+}
+
+/* Subtext */
+.subtext {
+    max-width: 480px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 3rem 0;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.8s forwards;
+}
+
+/* CTA Buttons */
+.ctaWrapper {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1s forwards;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.ctaButton:hover::before {
+    left: 0;
+}
+
+.ctaButton:hover {
+    color: #fff;
+}
+
+.ctaButton span,
+.ctaButton .arrow {
+    position: relative;
+    z-index: 1;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .arrow {
+    transform: translateX(5px);
+}
+
+.secondaryButton {
+    padding: 1.25rem 2.5rem;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.secondaryButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: left 0.4s ease;
+    z-index: 0;
+    color: #000;
+}
+
+.secondaryButton:hover::before {
+    left: 0;
+}
+
+.secondaryButton:hover {
+    color: #000 !important;
+}
+
+.secondaryButton span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Side Element */
+.sideElement {
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 1.2s forwards;
+}
+
+.sideNumber {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    opacity: 0.1;
+    writing-mode: vertical-rl;
+}
+
+.sideText {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    writing-mode: vertical-rl;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sideTextLine {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: lineGrow 2s ease-out infinite;
+}
+
+/* Background Pattern */
+.bgPattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes lineGrow {
+
+    0%,
+    100% {
+        height: 40px;
+    }
+
+    50% {
+        height: 60px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sideElement {
+        display: none;
+    }
+
+    .decorCircle {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .headline {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .headlineBottom {
+        margin-left: 5%;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    .ctaWrapper {
+        flex-direction: column;
+    }
+
+    .ctaButton,
+    .secondaryButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .decorCircle {
+        width: 200px;
+        height: 200px;
+        right: -50px;
+    }
+}

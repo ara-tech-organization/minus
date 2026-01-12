@@ -1,0 +1,194 @@
+/* Outer spacing */
+.wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
+}
+
+/* Card styling */
+.card {
+    width: 100%;
+    max-width: 760px;
+    background: #ffffff;
+    padding: 50px 55px;
+    text-align: center;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography */
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #0c0c0c;
+    margin-bottom: 8px;
+}
+
+.title span {
+    font-size: Georgia;
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #6c6c6c;
+    margin-bottom: 35px;
+}
+
+/* Grid layout */
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 28px;
+    margin-bottom: 35px;
+}
+
+/* Labels */
+.formGroup label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #000000;
+    text-align: left;
+}
+.selectWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.iconRight {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a8a8a;
+    pointer-events: none;
+}
+
+.iconInput {
+    position: relative;
+}
+
+.iconInput input {
+    width: 100%;
+    padding: 13px 15px;
+    padding-right: 40px;
+    font-size: 14px;
+    border: 1px solid #e2e4e8;
+    border-radius: 8px;
+    background: #f9fafb;
+    transition: all 0.25s ease;
+}
+
+.selectWrapper select {
+    appearance: none;
+    width: 100%;
+    padding: 13px 15px;
+    padding-right: 40px;
+    background: #f9fafb;
+    font-size: 14px;
+    border: 1px solid #e2e4e8;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.selectWrapper select:focus,
+.iconInput input:focus {
+    background: white;
+    border-color: #b1b8c7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+/* Inputs */
+.input,
+.iconInput input {
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 14px;
+    border: 1px solid #e2e4e8;
+    border-radius: 8px;
+    color: #5b5b5b;
+    background: #f9fafb;
+    transition: all 0.25s ease;
+}
+
+.input:focus,
+.iconInput input:focus {
+    border-color: #b1b8c7;
+    background: white;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown arrow styling reset */
+select.input {
+    appearance: none;
+    background-image: url("/path/to/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+}
+
+/* Input with icon (date input) */
+.iconInput {
+    position: relative;
+}
+
+.iconInput img {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    width: 18px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* CTA Button */
+.ctaBtn {
+    width: 100%;
+    padding: 15px 0;
+    background: #000;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 640px) {
+    .card {
+        padding: 35px 25px;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+}

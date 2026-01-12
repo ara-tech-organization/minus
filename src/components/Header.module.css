@@ -1,0 +1,382 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #000;
+    /* BLACK BG */
+    color: #fff;
+    /* WHITE TEXT */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    /* Change line to white tint */
+    transition: opacity 0.3s ease;
+}
+
+.scrolled {
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.08);
+    /* White shadow tone */
+}
+
+
+
+.scrolled::after {
+    opacity: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: padding 0.3s ease;
+}
+
+.scrolled .container {
+    padding: 1rem 3rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+.logo:hover {
+    transform: translateX(3px);
+}
+
+.logoIcon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logoIcon {
+    transform: rotate(90deg);
+}
+
+.logoText {
+    position: relative;
+}
+
+/* Desktop Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.navUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navLink:hover .navUnderline {
+    width: 100%;
+}
+
+/* CTA Button */
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #000000;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.ctaButton:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.ctaButton:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.ctaButton span,
+.ctaArrow {
+    position: relative;
+    z-index: 1;
+}
+
+.ctaArrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .ctaArrow {
+    transform: translateX(3px);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.05);
+}
+
+.hamburgerLine {
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.hamburgerActive .hamburgerLine:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerActive .hamburgerLine:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburgerActive .hamburgerLine:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    color: #000000;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.mobileMenuOpen {
+    transform: translateX(0);
+}
+
+.mobileNav {
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mobileNavList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.mobileNavItem {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.mobileMenuOpen .mobileNavItem {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.mobileNavLink {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.mobileNavLink:hover {
+    padding-left: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.mobileNavNumber {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    min-width: 2rem;
+}
+
+.mobileCtaButton {
+    width: 100%;
+    padding: 1.25rem;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.mobileCtaButton:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(0.98);
+}
+
+.logoImage {
+    width: 140px;
+    /* Adjust size as needed */
+    height: auto;
+    display: block;
+}
+
+/* Animations */
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem 2rem;
+    }
+
+    .scrolled .container {
+        padding: 1rem 2rem;
+    }
+
+    .navList {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .ctaButton {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .container {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .scrolled .container {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.125rem;
+    }
+
+    .logoIcon {
+        font-size: 1.25rem;
+    }
+
+    .mobileNavLink {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobileNavLink {
+        font-size: 1.75rem;
+    }
+
+    .mobileNav {
+        padding: 5rem 1.5rem 1.5rem;
+    }
+}
