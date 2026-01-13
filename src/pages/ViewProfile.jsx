@@ -1,15 +1,12 @@
 import React from "react";
+import DoctorBooking from "../components/viewprofile/DoctorBooking";
 
-import RajPalaniappan from "../components/ViewProfile/RajPalaniappan";
-
-
-
-const About = () => {
+const ViewProfile = () => {
   return (
     <div>
-      <RajPalaniappan />
+      <DoctorBooking />
     </div>
   );
 };
 
-export default About;
+export default ViewProfile;
