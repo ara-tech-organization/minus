@@ -1,0 +1,292 @@
+.section {
+    padding: 5rem 2rem;
+    background: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 4rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e5e5e5 100%);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .image {
+    transform: scale(1.12);
+}
+
+.cardContent {
+    padding: 2rem;
+}
+
+.iconWrapper {
+    width: 44px;
+    height: 44px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconWrapper svg {
+    color: #000;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+    background: #000;
+    transform: scale(1.1);
+}
+
+.card:hover .iconWrapper svg {
+    color: #fff;
+    transform: rotate(5deg);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.card:hover .cardTitle {
+    color: #333;
+}
+
+.cardDescription {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 1.5rem 0;
+    min-height: 72px;
+}
+
+.detailsBtn {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.detailsBtn::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+.card:hover .detailsBtn::after {
+    width: calc(100% - 30px);
+}
+
+.arrow {
+    display: inline-block;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .imageContainer {
+        height: 180px;
+    }
+
+    .cardContent {
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .header {
+        margin-bottom: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.875rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .imageContainer {
+        height: 200px;
+    }
+
+    .cardContent {
+        padding: 1.5rem;
+    }
+
+    .cardTitle {
+        font-size: 1.125rem;
+    }
+
+    .cardDescription {
+        font-size: 0.875rem;
+        min-height: auto;
+    }
+
+    .iconWrapper {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+
+    .iconWrapper svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 2.5rem 1rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .cardTitle {
+        font-size: 1.0625rem;
+    }
+}

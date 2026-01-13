@@ -15,7 +15,6 @@ import TransformationSteps from "../components/Home/TransformationSteps";
 const Home = () => {
   return (
     <div>
-      {/* <Hero /> */}
       <BodyContouringHero />
       <ServicesSection />
       <HeroVideo />

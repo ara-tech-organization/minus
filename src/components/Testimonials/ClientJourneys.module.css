@@ -1,0 +1,283 @@
+.section {
+    padding: 5rem 2rem;
+    background: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.videoCard {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    cursor: pointer;
+}
+
+.videoCard:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+.videoThumbnail {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0e0e0 0%, #d0d0d0 100%);
+}
+
+.thumbnailImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.videoCard:hover .thumbnailImage {
+    transform: scale(1.1);
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.playButton svg {
+    margin-left: 3px;
+}
+
+.videoCard:hover .playButton {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: #fff;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+.duration {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.4rem 0.75rem;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.videoCard:hover .duration {
+    background: rgba(0, 0, 0, 0.95);
+    transform: translateY(-2px);
+}
+
+.videoInfo {
+    padding: 1.75rem;
+}
+
+.videoTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.videoCard:hover .videoTitle {
+    color: #333;
+}
+
+.videoCategory {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+    }
+
+    .videoCard:last-child {
+        grid-column: 1 / -1;
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 968px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .videoCard:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .videoThumbnail {
+        height: 260px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .header {
+        margin-bottom: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.875rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .videoThumbnail {
+        height: 240px;
+    }
+
+    .playButton {
+        width: 54px;
+        height: 54px;
+    }
+
+    .playButton svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .duration {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.65rem;
+    }
+
+    .videoInfo {
+        padding: 1.5rem;
+    }
+
+    .videoTitle {
+        font-size: 1.125rem;
+    }
+
+    .videoCategory {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 2.5rem 1rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .videoThumbnail {
+        height: 220px;
+    }
+
+    .videoTitle {
+        font-size: 1.0625rem;
+    }
+}

@@ -1,0 +1,125 @@
+/* PAGE WRAPPER */
+.wrapper {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* TOP TEXT */
+.visitText {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8c8c8c;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 80px;
+    justify-items: center;
+}
+
+/* CARDS */
+.card {
+    width: 100%;
+    max-width: 360px;
+    background: white;
+    border-radius: 14px;
+    padding: 28px 24px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover Elevation */
+.card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.cardHeader h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+}
+
+.icon {
+    color: #111;
+}
+
+/* DETAILS */
+.infoRow {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin: 8px 0;
+}
+
+.infoRow p {
+    font-size: 14px;
+    color: #444;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.landmark {
+    font-size: 11px;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 100px;
+    margin: 6px 0 12px;
+    color: #777;
+    letter-spacing: 0.5px;
+}
+
+.subIcon {
+    color: #444;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,309 @@
+.heroSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.heroImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.763) 0%,
+            rgba(0, 0, 0, 0.795) 70%,
+            rgba(0, 0, 0, 0.65) 100%);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    height: calc(100% - 70px);
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.container {
+    max-width: 650px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.8s ease-out 0.3s both;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.1;
+    animation: fadeInUp 1s ease-out 0.2s both;
+    letter-spacing: -0.02em;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.tabsContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.tabs {
+    display: flex;
+    padding: 0 4rem;
+    gap: 0;
+}
+
+.tab {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #666;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.tab::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+.tab:hover {
+    color: #000;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.tab:hover::before {
+    width: 100%;
+}
+
+.tabActive {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+.tabActive::before {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .heroContent {
+        padding: 0 3rem;
+    }
+
+    .tabs {
+        padding: 0 3rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .heroSection {
+        height: 550px;
+    }
+
+    .heroContent {
+        padding: 0 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .tabs {
+        padding: 0 2rem;
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        padding: 1.25rem 1.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        height: 500px;
+    }
+
+    .heroContent {
+        padding: 0 1.5rem;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .description br {
+        display: none;
+    }
+
+    .tabs {
+        padding: 0 1rem;
+    }
+
+    .tab {
+        flex: 1 1 50%;
+        padding: 1rem 1rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroSection {
+        height: 450px;
+    }
+
+    .heroContent {
+        padding: 0 1rem;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+
+    .tabs {
+        padding: 0 0.5rem;
+    }
+
+    .tab {
+        padding: 0.875rem 0.75rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.05em;
+    }
+}
