@@ -1,5 +1,11 @@
 import React, { useState, useRef } from "react";
 import styles from "./BodyTreatment.module.css";
+import bg0 from "@/assets/Background.png";
+import bg1 from "@/assets/Background (1).png";
+import bg2 from "@/assets/Background (2).png";
+import bg3 from "@/assets/Background (3).png";
+import bg4 from "@/assets/Background (4).png";
+import bg5 from "@/assets/Background (5).png";
 
 const BodyTreatment = () => {
   const [activeTab, setActiveTab] = useState("non-invasive");
@@ -17,51 +23,51 @@ const BodyTreatment = () => {
   const treatments = {
     "non-invasive": [
       {
-        icon: "/src/assets/Background.png",
+        icon: bg0,
         title: "Therma Wrap",
         description: "Heat therapy for fat loss and skin tightening.",
       },
       {
-        icon: "/src/assets/Background (1).png",
+        icon: bg1,
         title: "Slim Smart",
         description: "Enhances natural curves with targeted fat reduction.",
       },
       {
-        icon: "/src/assets/Background (2).png",
+        icon: bg2,
         title: "Silhouette Refinement",
         description: "Redefines body contours for a sleek, refined look.",
       },
     ],
     "minimally-invasive": [
       {
-        icon: "/src/assets/Background (3).png",
+        icon: bg3,
         title: "Lipo Sculpt",
         description: "Minimally invasive fat removal for precise contouring.",
       },
       {
-        icon: "/src/assets/Background (4).png",
+        icon: bg4,
         title: "Body Lift",
         description: "Tightens and lifts sagging skin areas.",
       },
       {
-        icon: "/src/assets/Background (5).png",
+        icon: bg5,
         title: "Ultra Shape",
         description: "Advanced ultrasound body shaping technology.",
       },
     ],
     surgical: [
       {
-        icon: "/src/assets/Background (3).png",
+        icon: bg3,
         title: "Full Body Lift",
         description: "Comprehensive surgical body transformation.",
       },
       {
-        icon: "/src/assets/Background (4).png",
+        icon: bg4,
         title: "Tummy Tuck",
         description: "Surgical abdomen contouring and tightening.",
       },
       {
-        icon: "/src/assets/Background (5).png",
+        icon: bg5,
         title: "Premium Sculpt",
         description: "Advanced surgical body sculpting procedure.",
       },
@@ -70,17 +76,17 @@ const BodyTreatment = () => {
 
   const rightTreatments = [
     {
-      icon: "/src/assets/Background (3).png",
+      icon: bg3,
       title: "Skin Fusion RF",
       description: "Radiofrequency technology tightens and tones skin.",
     },
     {
-      icon: "/src/assets/Background (4).png",
+      icon: bg4,
       title: "V-Fit Contour",
       description: "Non-invasive body contouring for a sculpted silhouette.",
     },
     {
-      icon: "/src/assets/Background (5).png",
+      icon: bg5,
       title: "CryoSculpt",
       description: "Freeze away fat cells with precision cooling technology.",
     },
@@ -161,13 +167,13 @@ const BodyTreatment = () => {
         >
           <div className={styles.sliderContainer}>
             <div className={styles.beforeImage}>
-              <img src="/assets/before.png" alt="Before" />
+              <img src="src/assets/before.png" alt="Before" />
             </div>
             <div
               className={styles.afterImage}
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
-              <img src="/assets/after.png" alt="After" />
+              <img src="src/assets/after.png" alt="After" />
             </div>
             <div
               className={styles.sliderHandle}

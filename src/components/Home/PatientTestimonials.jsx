@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./PatientTestimonials.module.css";
+import FacialContouring from "@/assets/Facial-contouring.png";
 
 const PatientTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,7 +9,7 @@ const PatientTestimonials = () => {
   const testimonials = [
     {
       id: 1,
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       patient: "Patient A",
       duration: "12 Weeks",
       treatment: "Targeted Abdominal Sculpting",
@@ -16,7 +17,7 @@ const PatientTestimonials = () => {
     },
     {
       id: 2,
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       patient: "Patient B",
       duration: "8 Weeks",
       treatment: "Lower Body Contouring",
@@ -24,7 +25,7 @@ const PatientTestimonials = () => {
     },
     {
       id: 3,
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       patient: "Patient C",
       duration: "16 Weeks",
       treatment: "Full Body Transformation",
@@ -32,7 +33,7 @@ const PatientTestimonials = () => {
     },
     {
       id: 4,
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       patient: "Patient D",
       duration: "10 Weeks",
       treatment: "Facial Contouring",
@@ -40,7 +41,7 @@ const PatientTestimonials = () => {
       },
     {
       id: 5,
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       patient: "Patient D",
       duration: "10 Weeks",
       treatment: "Facial Contouring",
@@ -48,7 +49,7 @@ const PatientTestimonials = () => {
       },
     {
       id: 6,
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       patient: "Patient D",
       duration: "10 Weeks",
       treatment: "Facial Contouring",

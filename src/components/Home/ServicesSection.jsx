@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./ServicesSection.module.css";
+import BodyLiftImage from "@/assets/Body-lift.png";
+import LiposuctionImage from "@/assets/Liposuction.png";
+import InjectionImage from "@/assets/Injection.png";  
 
 const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      image: "/src/assets/Body-lift.png",
+      image: BodyLiftImage,
       icon: (
         <svg
           width="24"
@@ -26,7 +29,7 @@ const ServicesSection = () => {
     },
     {
       id: 2,
-      image: "/src/assets/Liposuction.png",
+      image: LiposuctionImage,
       icon: (
         <svg
           width="24"
@@ -48,7 +51,7 @@ const ServicesSection = () => {
     },
     {
       id: 3,
-      image: "/src/assets/Injection.png",
+      image: InjectionImage,
       icon: (
         <svg
           width="24"
@@ -69,7 +72,7 @@ const ServicesSection = () => {
     },
     {
       id: 4,
-      image: "/src/assets/Injection.png",
+      image: InjectionImage,
       icon: (
         <svg
           width="24"

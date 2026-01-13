@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./HolisticApproach.module.css";
-
+import Holistic from "@/assets/Holistic.png";
 const HolisticApproach = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -107,7 +107,7 @@ const HolisticApproach = () => {
         <div className={styles.rightSection}>
           <div className={styles.imageCard}>
             <img
-              src="/src/assets/Holistic.png"
+              src={Holistic}
               alt="Body measurement consultation"
               className={styles.mainImage}
             />

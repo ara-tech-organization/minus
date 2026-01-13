@@ -6,6 +6,8 @@ import {
   AlignCenterVertical,
   StretchVertical,
 } from "lucide-react";
+import FacialContouring from "@/assets/Facial-contouring.png";
+
 
 const AreasOfExpertise = () => {
   const [activeArea, setActiveArea] = useState("face");
@@ -40,7 +42,7 @@ const expertiseAreas = [
       title: "Face & Neck Contouring",
       description:
         "Our facial contouring procedures address concerns like double chin, sagging jowls, and loss of jawline definition. We use a combination of AI-Robotic Sonic Slim and injection lipolysis to reveal your natural bone structure.",
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       benefits: [
         "No downtime required",
         "Visible results in 2-4 sessions",
@@ -51,7 +53,7 @@ const expertiseAreas = [
       title: "Arm Sculpting",
       description:
         "Target stubborn arm fat and achieve toned, defined arms with our advanced body contouring treatments. Perfect for addressing concerns in the upper arm area that resist diet and exercise.",
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       benefits: [
         "Non-invasive treatment",
         "Results visible in 3-5 sessions",
@@ -62,7 +64,7 @@ const expertiseAreas = [
       title: "Abdomen Contouring",
       description:
         "Sculpt and define your midsection with targeted abdominal treatments. Our procedures help reduce stubborn belly fat and create a more toned, contoured appearance.",
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       benefits: [
         "Target specific problem areas",
         "Visible results in 4-6 sessions",
@@ -73,7 +75,7 @@ const expertiseAreas = [
       title: "Thighs & Buttocks Shaping",
       description:
         "Achieve smoother, more contoured thighs and buttocks with our specialized treatments. Address cellulite, unwanted fat deposits, and skin laxity for a more sculpted lower body.",
-      image: "/src/assets/Facial-contouring.png",
+      image: FacialContouring,
       benefits: [
         "Comprehensive lower body treatment",
         "Results in 4-6 sessions",

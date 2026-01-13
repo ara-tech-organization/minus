@@ -29,7 +29,7 @@ const Footer = () => {
           <div className={styles.brandColumn}>
             <div className={styles.logo}>
               <img
-                src="/src/assets/logo.webp"
+                src="/assets/logo.webp"
                 alt="Minus"
                 className={styles.logoImage}
               />

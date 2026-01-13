@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./HomeHero.module.css";
-
+import model from "@/assets/model-image.png";
 const BodyContouringHero = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -67,7 +67,7 @@ const BodyContouringHero = () => {
         <div className={styles["right-content"]}>
           <div className={styles["image-card"]}>
             <img
-              src="/src/assets/model-image.png"
+              src={model}
               alt="Body transformation success"
               className={styles["hero-image"]}
             />

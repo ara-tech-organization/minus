@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-
+import logo from "@/assets/logo.webp";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,11 +29,7 @@ const Header = () => {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         <a href="#home" className={styles.logo}>
-          <img
-            src="/src/assets/logo.webp"
-            alt="Studio Logo"
-            className={styles.logoImage}
-          />
+          <img src={logo} alt="Studio Logo" className={styles.logoImage} />
         </a>
 
         {/* Desktop Navigation */}
