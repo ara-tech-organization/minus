@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* ================= HERO FULL PAGE ================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 586px;
+  margin: 81px auto 0;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #111827;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  opacity: 1;
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(17, 24, 39, 0.95) 0%,
+    rgba(17, 24, 39, 0.8) 35%,
+    rgba(17, 24, 39, 0.45) 65%,
+    rgba(17, 24, 39, 0.15) 100%
+  );
+
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* ================= CONTENT BLOCK ================= */
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  width: 768px;
+  height: auto;
+
+  margin-left: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  text-align: left;
+  opacity: 1;
+
+  animation: fadeInUp 1s ease-out;
+}
+
+/* ================= BADGE ================= */
+
+.badge {
+  width: 218.17px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  margin-bottom: 24px;
+
+  animation: fadeInScale 0.8s ease-out 0.2s both;
+}
+
+/* ================= TITLE ================= */
+
+.title {
+  width: 509.2px;
+  height: auto;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 72px;
+  letter-spacing: -1.8px;
+  color: #ffffff;
+
+  margin: 0 0 24px 0;
+
+  animation: fadeInLeft 0.8s ease-out 0.4s both;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.description {
+  width: 658px;
+  height: auto;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #d1d5db;
+
+  opacity: 1;
+
+  animation: fadeInLeft 0.8s ease-out 0.6s both;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 320px - 375px - Extra Small Mobile, Center Aligned */
+@media (min-width: 320px) and (max-width: 375px) {
+  .hero {
+    height: 420px;
+    margin-top: 60px;
+    background-position: center center;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(17, 24, 39, 0.85) 0%,
+      rgba(17, 24, 39, 0.75) 100%
+    );
+  }
+
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 32px);
+    max-width: 288px;
+    padding: 0 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badge {
+    width: auto;
+    min-width: 180px;
+    height: 26px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .title {
+    width: 100%;
+    height: auto;
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: -0.8px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* 376px - 480px - Small Mobile */
+@media (min-width: 376px) and (max-width: 480px) {
+  .hero {
+    height: 440px;
+    margin-top: 60px;
+    background-position: center center;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(17, 24, 39, 0.85) 0%,
+      rgba(17, 24, 39, 0.75) 100%
+    );
+  }
+
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 40px);
+    max-width: 340px;
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badge {
+    width: auto;
+    min-width: 190px;
+    height: 28px;
+    font-size: 9px;
+    padding: 0 18px;
+    margin-bottom: 18px;
+  }
+
+  .title {
+    width: 100%;
+    height: auto;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+/* 481px - 640px - Large Mobile */
+@media (min-width: 481px) and (max-width: 640px) {
+  .hero {
+    height: 480px;
+    margin-top: 70px;
+    background-position: center right;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(17, 24, 39, 0.9) 0%,
+      rgba(17, 24, 39, 0.7) 70%,
+      rgba(17, 24, 39, 0.3) 100%
+    );
+  }
+
+  .content {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: calc(100% - 80px);
+    max-width: 520px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .badge {
+    width: auto;
+    min-width: 200px;
+    height: 28px;
+    font-size: 9px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    font-size: 34px;
+    line-height: 46px;
+    letter-spacing: -1.2px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 480px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+/* 641px - 768px - Tablet Portrait */
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero {
+    height: 500px;
+    margin-top: 75px;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(17, 24, 39, 0.92) 0%,
+      rgba(17, 24, 39, 0.75) 60%,
+      rgba(17, 24, 39, 0.35) 100%
+    );
+  }
+
+  .content {
+    margin-left: 60px;
+    margin-right: 60px;
+    width: calc(100% - 120px);
+    max-width: 600px;
+  }
+
+  .badge {
+    width: 210px;
+    height: 29px;
+    font-size: 9.5px;
+    margin-bottom: 22px;
+  }
+
+  .title {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    font-size: 38px;
+    line-height: 52px;
+    letter-spacing: -1.4px;
+    margin-bottom: 22px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 550px;
+    font-size: 17px;
+    line-height: 26px;
+  }
+}
+
+/* 769px - 900px - Tablet Landscape */
+@media (min-width: 769px) and (max-width: 900px) {
+  .hero {
+    height: 540px;
+    margin-top: 78px;
+  }
+
+  .content {
+    margin-left: 80px;
+    margin-right: 80px;
+    width: calc(100% - 160px);
+    max-width: 680px;
+  }
+
+  .badge {
+    width: 215px;
+    height: 30px;
+    font-size: 10px;
+    margin-bottom: 23px;
+  }
+
+  .title {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    font-size: 42px;
+    line-height: 58px;
+    letter-spacing: -1.5px;
+    margin-bottom: 23px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+/* 901px - 1040px - Small Desktop */
+@media (min-width: 901px) and (max-width: 1040px) {
+  .hero {
+    height: 560px;
+    margin-top: 80px;
+  }
+
+  .content {
+    margin-left: 120px;
+    margin-right: 100px;
+    width: 720px;
+  }
+
+  .badge {
+    width: 218px;
+    height: 30px;
+    font-size: 10px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    font-size: 46px;
+    line-height: 64px;
+    letter-spacing: -1.6px;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 640px;
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+
+/* 1041px+ - Standard Desktop */
+@media (min-width: 1041px) {
+  .hero {
+    height: 586px;
+    margin-top: 81px;
+  }
+
+  .content {
+    margin-left: 300px;
+    width: 768px;
+  }
+
+  .badge {
+    width: 218.17px;
+    height: 30px;
+    font-size: 10px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    width: 509.2px;
+    height: auto;
+    font-size: 50px;
+    line-height: 72px;
+    letter-spacing: -1.8px;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    width: 658px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

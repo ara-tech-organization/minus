@@ -22,6 +22,8 @@ const Header = () => {
     { label: "Work", href: "#work" },
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
+    { label: "Specialists", href: "#specialists" },
+    { label: "Supplements", href: "#supplements" },
     { label: "Contact", href: "#contact" },
   ];
 
