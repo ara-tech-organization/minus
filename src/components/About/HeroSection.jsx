@@ -21,8 +21,21 @@ const Hero = () => {
           aesthetic artistry to deliver results that redefine your confidence.
         </p>
         <div className={styles.buttons}>
-          <button className={styles.primaryBtn}>Book an Appointment</button>
-          <button className={styles.secondaryBtn}>
+          <button
+            className={styles.primaryBtn}
+            onClick={() => {
+              window.location.href = "/#contact";
+            }}
+          >
+            Book an Appointment
+          </button>
+
+          <button
+            className={styles.secondaryBtn}
+            onClick={() => {
+              window.location.href = "/#treatments";
+            }}
+          >
             Learn More <span className={styles.arrow}>→</span>
           </button>
         </div>

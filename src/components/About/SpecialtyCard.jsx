@@ -18,7 +18,12 @@ const SpecialtyCard = ({ icon: Icon, image, title, description, delay }) => {
       <div className={styles.cardContent}>
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardDescription}>{description}</p>
-        <button className={styles.learnMoreBtn}>
+        <button
+          className={styles.learnMoreBtn}
+          onClick={() => {
+            window.location.href = "/#treatments";
+          }}
+        >
           LEARN MORE <span className={styles.arrow}>→</span>
         </button>
       </div>

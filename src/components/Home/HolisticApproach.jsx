@@ -101,7 +101,14 @@ const HolisticApproach = () => {
             ))}
           </div>
 
-          <button className={styles.ctaButton}>Learn More</button>
+          <button
+            className={styles.ctaButton}
+            onClick={() => {
+              window.location.href = "/#treatments";
+            }}
+          >
+            Learn More
+          </button>
         </div>
 
         <div className={styles.rightSection}>
@@ -117,6 +124,5 @@ const HolisticApproach = () => {
     </div>
   );
 };
-
 
 export default HolisticApproach;
