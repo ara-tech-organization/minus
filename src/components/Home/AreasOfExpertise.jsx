@@ -5,6 +5,8 @@ import {
   Dumbbell,
   AlignCenterVertical,
   StretchVertical,
+  ArrowUpDown,
+  Circle,
 } from "lucide-react";
 import FaceImg from "../../assets/Face.png";
 import NeckImg from "../../assets/Neck.png";
@@ -25,7 +27,7 @@ const AreasOfExpertise = () => {
     {
       id: "neck",
       label: "Neck",
-      icon: <AlignCenterVertical size={20} strokeWidth={1.8} />,
+       icon: <ArrowUpDown size={20} strokeWidth={1.8} />,
     },
     {
       id: "arms",
@@ -46,7 +48,7 @@ const AreasOfExpertise = () => {
     {
       id: "buttocks",
       label: "Buttocks",
-      icon: <User size={20} strokeWidth={1.8} />,
+      icon: <Circle size={20} strokeWidth={1.8} />,
     },
   ];
 
