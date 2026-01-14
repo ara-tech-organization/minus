@@ -42,7 +42,7 @@ const ProcedureCard = ({
   );
 };
 
-const InfoCard = ({ icon: Icon, title, description, delay }) => {
+const InfoCard = ({ icon: Icon, title, description, delay, onClick }) => {
   return (
     <div className={styles.infoCard} style={{ animationDelay: `${delay}s` }}>
       <div className={styles.infoIcon}>
@@ -50,7 +50,9 @@ const InfoCard = ({ icon: Icon, title, description, delay }) => {
       </div>
       <h3 className={styles.infoTitle}>{title}</h3>
       <p className={styles.infoDescription}>{description}</p>
-      <button className={styles.viewDetailsBtn}>View Details</button>
+      <button onClick={onClick} className={styles.viewDetailsBtn}>
+        View Details
+      </button>
     </div>
   );
 };
@@ -94,7 +96,7 @@ const SurgicalProcedures = () => {
               badge="WEIGHT LOSS"
               title="Bariatric Surgery"
               delay={0.2}
-              onClick={() => handleDetails("bariatric")}
+              onClick={() => handleDetails("Bariatric")}
             />
 
             <ProcedureCard
@@ -113,12 +115,14 @@ const SurgicalProcedures = () => {
               title="Total Body Lift"
               size="large"
               delay={0.4}
+              onClick={() => handleDetails("body")}
             />
             <InfoCard
               icon={Briefcase}
               title="Liposuction"
               description="Traditional suction-assisted lipectomy for large volume fat removal."
               delay={0.5}
+              onClick={() => handleDetails("liposuction")}
             />
           </div>
         </div>
