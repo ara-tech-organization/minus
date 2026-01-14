@@ -19,19 +19,18 @@ const Treatment = () => {
 
   return (
     <div id="treatments">
-      <div data-aos="fade-up">
-        <TreatmentsHero />
-      </div>
+      <TreatmentsHero />
+
       <div data-aos="fade-up" data-aos-delay="200">
         <NonInvasiveTreatments />
       </div>
-      <div data-aos="fade-left" data-aos-delay="300">
+      <div data-aos="fade-down" data-aos-delay="300">
         <MinimallyInvasive />
       </div>
-      <div data-aos="fade-right" data-aos-delay="400">
+      <div data-aos="fade-up" data-aos-delay="400">
         <SurgicalProcedures />
       </div>
-      <div data-aos="zoom-in" data-aos-delay="500">
+      <div data-aos="fade-down" data-aos-delay="500">
         <CompareProcedures />
       </div>
     </div>
