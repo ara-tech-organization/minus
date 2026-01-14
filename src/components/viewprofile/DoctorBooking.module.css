@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); */
   padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,11 +61,12 @@
   gap: 32px;
   padding: 80px 80px 64px;
   border-bottom: 1px solid #e5e7eb;
+  align-items: stretch; 
 }
 
 .profileImage {
-  width: 240px;
-  height: 240px;
+  width: 280px;
+  /* height: 240px; */
   border-radius: 20px;
   overflow: hidden;
   flex-shrink: 0;
@@ -144,21 +145,482 @@
 }
 
 /* ================= CONTENT SECTIONS ================= */
-.section {
-  padding: 48px 80px;
-  border-bottom: 1px solid #e5e7eb;
+/* KeyCredentials.module.css */
+
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  background-color: #ffffff;
+  bottom:0;
 }
 
-.sectionTitle {
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.accent {
+  width: 4px;
+  height: 32px;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 33px;
+}
+
+.card {
+  width: 420px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 36px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+
+.card:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon {
+  border-color: #000000;
+  transform: rotate(5deg) scale(1.05);
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #000000;
+}
+
+.description {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+  font-weight: 500;
+  padding-top: 4px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .accent {
+    height: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 32px 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+/* =================  Major Section================= */
+.dbContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  background: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= GRID ================= */
+.dbGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* ================= SECTION ================= */
+.dbSection {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.dbHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Vertical black line */
+.dbAccent {
+  width: 4px;
+  height: 28px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* Title */
+.dbTitle {
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: #111;
+  margin: 0;
 }
 
-.aboutText {
-  font-size: 15px;
-  line-height: 1.8;
+/* ================= LIST ================= */
+.dbList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dbListItem {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.6;
   color: #4b5563;
+
+  opacity: 0;
+  transform: translateY(12px);
+  animation: dbFadeUp 0.6s ease forwards;
+}
+
+/* Bullet dot */
+.dbListItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes dbFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .dbGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* ================= AWARDS SECTION ================= */
+.awardsSection {
+  padding: 10px 0px 70px;
+  background: #ffffff;
+}
+
+.awardsHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+/* .awardsAccent {
+  width: 4px;
+  height: 32px;
+  background: #000000;
+  border-radius: 2px;
+} */
+
+.awardsTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trophyIcon {
+  font-size: 32px;
+}
+
+.awardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.awardCard {
+  background: #f9fafb;
+  border-left: 4px solid #000000;
+  padding: 24px 28px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.awardCard:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.awardText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #374151;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .awardsSection {
+    padding: 40px 24px;
+  }
+  
+  .awardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .awardsTitle {
+    font-size: 24px;
+  }
+  
+  .awardsAccent {
+    height: 28px;
+  }
+}
+
+
+/* ================= RESEARCH AND MEMBERSHIPS SECTION ================= */
+/* ================= MAIN SECTION ================= */
+.researchMembershipsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 60px 24px;
+  background: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= LEFT : RESEARCH ================= */
+.researchColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.researchHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.researchAccent {
+  width: 4px;
+  height: 32px;
+  background: #000;
+  border-radius: 2px;
+}
+
+.researchTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+/* ================= PUBLICATIONS LIST ================= */
+.publicationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* IMPORTANT: NO CARD, JUST FLEX */
+.publicationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.publicationIcon {
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  color: #6b7280;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.publicationText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0;
+}
+
+/* ================= RIGHT : MEMBERSHIPS ================= */
+.membershipsColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.membershipsHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.membershipsAccent {
+  width: 4px;
+  height: 32px;
+  background: #000;
+  border-radius: 2px;
+}
+
+.membershipsTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+/* ================= MEMBERSHIP BADGES ================= */
+.membershipBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  max-width: 500px;
+}
+
+.membershipBadge {
+  background: #f3f4f6;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  letter-spacing: 0.5px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .researchMembershipsSection {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
 }
 
 /* ================= RIGHT SECTION ================= */
@@ -415,22 +877,40 @@
   background: #f9fafb;
   border-radius: 24px;
   border: 1px solid #e5e7eb;
-  padding: 24px;
+  padding: 32px 28px 28px;
   margin-top: 24px;
+  position: relative;
 }
 
+/* Large opening quote icon */
+.quoteIcon {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  font-size: 64px;
+  font-weight: 700;
+  color: #d1d5db; /* light gray */
+  line-height: 1;
+  font-family: serif;
+}
+
+/* Quote text */
 .quoteText {
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
-  color: #374151;
-  margin-bottom: 14px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 36px 0 18px;
 }
 
+/* Author */
 .quoteAuthor {
   font-size: 14px;
-  font-weight: 600;
-  color: #111827;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.5px;
 }
+
 
 .category {
   color: #666;
