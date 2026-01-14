@@ -20,7 +20,14 @@ import Lymphatic from "@/assets/Lymphatic-Drainage.png";
 import RedLight from "@/assets/Red-Light-Therapy.png";
 import IV from "@/assets/IV-Vitamin-Drip.png";
 import { useNavigate } from "react-router-dom";
-
+import slim2 from "@/assets/slim-(2).png";
+import lymph from "@/assets/Lymph-Detoxify.png";
+import Silhouette from "@/assets/Silhouette-Refinement.png";
+import JawDefineContour from "@/assets/JawDefine-Contour.png"
+import LipoContour from "@/assets/Lipo-Contour.png";
+import SlimSmartTreatment from "@/assets/SlimSmartTreatment.png";
+import CryoSculpt from "@/assets/CryoSculpt.png";
+import CryoFlash from "@/assets/CryoFlash.png";
 const TreatmentCard = ({
   image,
   icon: Icon,
@@ -54,7 +61,7 @@ const NonInvasiveTreatments = () => {
   const treatments = [
     {
       id: "slimtrim",
-      image: tabs,
+      image: slim2,
       icon: Link,
       title: "SlimTrim Capsule",
       description:
@@ -62,7 +69,7 @@ const NonInvasiveTreatments = () => {
     },
     {
       id: "CryoFlash",
-      image: cryo,
+      image: CryoFlash,
       icon: Snowflake,
       title: "CryoFlash",
       description:
@@ -86,7 +93,7 @@ const NonInvasiveTreatments = () => {
     },
     {
       id: "CryoSculpt",
-      image: cryo,
+      image: CryoSculpt,
       icon: Snowflake,
       title: "CryoSculpt",
       description:
@@ -109,36 +116,44 @@ const NonInvasiveTreatments = () => {
         "Radiofrequency energy to stimulate collagen production and tighten loose skin post-weight loss.",
     },
     {
-      id: "ems",
-      image: EMS,
+      id: "LymphDetoxify",
+      image: lymph,
       icon: Zap,
-      title: "EMS Muscle Tone",
+      title: "Lymph Detoxify",
       description:
-        "High-intensity electromagnetic therapy to build muscle and burn fat simultaneously.",
+        "Ever feel like your body is holding on to extra weight, puffiness, or just general sluggishnes ....",
     },
     {
-      id: "lymph",
-      image: Lymphatic,
+      id: "Silhouette",
+      image: Silhouette,
       icon: Smile,
-      title: "Lymphatic Drainage",
+      title: "Silhouette Refinement",
       description:
-        "Pressotherapy massage to improve circulation and reduce water retention and bloating.",
+        "Fat, bloating, and sagging skin can sometimes blur your body’s details. Silhouette ....",
     },
     {
-      id: "redlight",
-      image: RedLight,
+      id: "JawDefine",
+      image: JawDefineContour,
       icon: Sun,
-      title: "Red Light Therapy",
+      title: "JawDefine Contour",
       description:
-        "Low-level laser therapy to contour the body and improve skin texture and elasticity.",
+        "JawDefine Contour is here to reshape, refine, and redefine your jawline with cutting-edge ....",
     },
     {
-      id: "iv",
-      image: IV,
+      id: "Lipo",
+      image: LipoContour,
       icon: Droplet,
-      title: "IV Vitamin Drip",
+      title: "Lipo Contour",
       description:
-        "Customized nutrient blends to boost energy, improve metabolism and support weight loss.",
+        "Even with consistent workouts and a disciplined diet, some areas of stubborn fat refuse ....",
+    },
+    {
+      id: "Slim",
+      image: SlimSmartTreatment,
+      icon: Droplet,
+      title: "Slim Smart Treatment",
+      description:
+        "Everyday stress, poor circulation, and stubborn fat can leave the body feeling sluggish and unbalanced ....",
     },
   ];
 

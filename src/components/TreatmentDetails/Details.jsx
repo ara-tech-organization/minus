@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Activity, BadgeCheck, ChevronDown, Flame } from "lucide-react";
+import { Activity, BadgeCheck, BatteryLow, BrushIcon, CaseLowerIcon, ChevronDown, Clock, CloudLightning, CloudLightningIcon, Expand, Eye, FastForward, Flame, Flower, Flower2, FrameIcon, GlassWater, LucideCloudLightning, Shrink, SignalLow, User, WifiZero } from "lucide-react";
 import styles from "./Details.module.css";
 import slim from "@/assets/slim.png";
 import robo from "@/assets/robo.png";
@@ -9,6 +9,8 @@ import cryomax from "@/assets/cryo-max.png";
 import CryoSphere360 from "@/assets/CryoSphere360.png";
 import rf from "@/assets/rf.png";
 import CryoSculpt from "@/assets/cryo-sculpt.png";
+import lymph from "@/assets/lymph.png";
+import JawDefine from "@/assets/Jaw.png"
 import {
   UtensilsCrossed,
   Pill,
@@ -722,12 +724,12 @@ const DetailsPage = () => {
         ],
       },
     },
-    lymph: {
+    LymphDetoxify: {
       hero: {
         title: "Lymph Detoxify",
         description:
-          "Detox like you never have BEFORE by draining impurities and boosting circulation.",
-        image: "/assets/hero-massage.png",
+          "Ever feel like your body is holding on to extra weight, puffiness, or just general sluggishness? That’s where Lymph Detoxify comes in. Our specialized treatment targets fluid retention and helps flush out toxins naturally.",
+        image: lymph,
         buttons: [
           { text: "START YOUR JOURNEY", variant: "primary" },
           { text: "LEARN MORE", variant: "secondary" },
@@ -740,12 +742,12 @@ const DetailsPage = () => {
           {
             id: 1,
             description:
-              "Gentle rhythmic massage stimulates lymphatic flow and detoxification.",
+              "Using a gentle, rhythmic technique, Lymph Detoxify stimulates the lymphatic system, which acts as the body’s natural drainage filter. This process encourages lymph fluid circulation, effectively removing waste products, excess fluid, and metabolic toxins from your tissues.",
           },
           {
             id: 2,
             description:
-              "Reduces bloating, promotes lightness and enhances internal balance.",
+              "The result? A lighter, more energized you! By reducing fluid retention and boosting circulation, this treatment not only slims the silhouette but also enhances your immune system and overall skin tone, leaving you feeling revitalized from the inside out.",
           },
         ],
       },
@@ -756,33 +758,36 @@ const DetailsPage = () => {
         benefits: [
           {
             id: 1,
-            number: "1",
-            title: "WATER REDUCTION",
-            description: "Reduce water retention.",
+            icon: Flame,
+            title: "Puffiness Reduction",
+            description: "ESignificantly reduces water retention and bloating.",
           },
           {
             id: 2,
-            number: "2",
-            title: "DETOXIFICATION",
-            description: "Flush toxins naturally.",
+            icon: GlassWater,
+            title: "Detoxification",
+            description:
+              "Flushes out metabolic waste and environmental toxins.",
           },
           {
             id: 3,
-            number: "3",
-            title: "SKIN REJUVENATION",
-            description: "Improve skin texture.",
+            icon: Flower,
+            title: "Skin Rejuvenation",
+            description:
+              "Promotes a clearer, healthier complexion through better flow.",
           },
           {
             id: 4,
-            number: "4",
-            title: "REDUCES TENSION",
-            description: "Relieve muscle tightness.",
+            icon: Activity,
+            title: "Reduced Tension",
+            description:
+              "Relieves muscle tension and promotes deep relaxation.",
           },
           {
             id: 5,
-            number: "5",
-            title: "FASTER RECOVERY",
-            description: "Accelerate healing.",
+            icon: FastForward,
+            title: "Faster Recovery",
+            description: "Accelerates healing post-exercise or post-surgery.",
           },
         ],
       },
@@ -793,12 +798,347 @@ const DetailsPage = () => {
           {
             id: 1,
             question: "How soon will I notice a difference?",
-            answer: "Most clients notice results within 24-48 hours.",
+            answer:
+              "Most people feel lighter and more refreshed immediately after their session, with visible improvements in puffiness and swelling over the next few days.",
           },
           {
             id: 2,
-            question: "Is this a medical treatment?",
-            answer: "It is a wellness detox therapy, not a medical treatment.",
+            question: "Is the treatment painful?",
+            answer:
+              "Not at all! The process is gentle and soothing, often compared to a light, rhythmic massage.",
+          },
+          {
+            id: 3,
+            question: "How often should I get this treatment?",
+            answer:
+              "It depends on your goals. A few sessions per month can work wonders for detox, but for ongoing maintenance, once a month is ideal.",
+          },
+          {
+            id: 4,
+            question: "Will I lose weight with Lymph Detoxify?",
+            answer:
+              "While this isn’t a weight-loss treatment, it helps eliminate excess fluids, which can make you look and feel leaner and less bloated.",
+          },
+          {
+            id: 5,
+            question: "Can it help with cellulite?",
+            answer:
+              "Yes! By improving circulation and breaking down fluid buildup, this treatment can help reduce the appearance of cellulite over time.",
+          },
+        ],
+      },
+    },
+    Silhouette: {
+      hero: {
+        title: "Silhouette Refinement",
+        description:
+          "Fat, bloating, and sagging skin can sometimes blur your body’s details. Silhouette Refinement is a transformative treatment that sculpts, defines, and rejuvenates your body.",
+        image: lymph,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "By combining the power of Therma Wraps, EMS Heimsture muscle stimulation, and Lymph Detoxify therapy, we target the body's structure at multiple levels to address underlying aesthetic concerns effectively.",
+          },
+          {
+            id: 2,
+            description:
+              "The comprehensive process works by deeply tightening, toning, and detoxifying simultaneously, so the body can reveal its best shape with enhanced definition and contour.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose Silhouette Refinement?",
+        subtitle:
+          "With Silhouette Refinement, you can sculpt your body, firm your skin, and detoxify; all in one relaxing",
+        benefits: [
+          {
+            id: 1,
+            icon: Shrink,
+            title: "Fat Shrinking & Toning",
+            description:
+              "Targets stubborn areas to reduce volume and enhance muscle tone.",
+          },
+          {
+            id: 2,
+            icon: GlassWater,
+            title: "Elasticity & Smoothing",
+            description:
+              "Restores skin firmness and smooths out surface irregularities.",
+          },
+          {
+            id: 3,
+            icon: Flame,
+            title: "Metabolism Boost",
+            description:
+              "Stimulates metabolic activity for enhanced calorie burning.",
+          },
+          {
+            id: 4,
+            icon: Activity,
+            title: "Non-Invasive Relaxation",
+            description:
+              "A comfortable, pain-free experience that revitalizes your body.",
+          },
+          {
+            id: 5,
+            icon: Flower2,
+            title: "Tighter Skin / Inch Loss",
+            description: "Visible contouring results and measurable inch loss.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How does EMS Heimsture help with muscle toning?",
+            answer:
+              "EMS Heimsture technology stimulates deep muscle contractions, mimicking an intense workout to strengthen and define muscles effortlessly.",
+          },
+          {
+            id: 2,
+            question:
+              "Can this treatment help with water retention and bloating?",
+            answer:
+              "Absolutely! The therma wrap and lymph detoxify components work together to flush out excess fluids, reducing bloating and improving overall body shape.",
+          },
+          {
+            id: 3,
+            question: "Is this treatment safe for all skin types?",
+            answer:
+              "Yes, Silhouette Refinement is completely non-invasive and safe for all skin types, including sensitive skin.",
+          },
+          {
+            id: 4,
+            question: "Does the therma wrap have any side effects?",
+            answer:
+              "Not at all! The therma wrap contains advanced formulations that detoxify, hydrate, and firm the skin, leaving it soft, smooth, and refreshed.",
+          },
+          {
+            id: 5,
+            question: "How soon can I see results?",
+            answer:
+              "People start to notice a lighter, more sculpted look after just one session, with enhanced toning and definition over multiple treatments.",
+          },
+        ],
+      },
+    },
+    JawDefine: {
+      hero: {
+        title: "JawDefine Contour",
+        description:
+          "JawDefine Contour is here to reshape, refine, and redefine your jawline with cutting-edge Skin Fusion RF technology. Achieve a tighter, firmer, and more sculpted jawline without surgery or downtime.",
+        image: JawDefine,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "By breaking down stubborn fat deposits and tightening loose skin, the advanced treatment specifically targets the submental area to clear definition inhibitors.",
+          },
+          {
+            id: 2,
+            description:
+              "JawDefine Contour works with your body’s natural processes to give you the contoured profile you’ve always wanted, enhancing your natural structure.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose JawDefine Contour?",
+        subtitle:
+          "JawDefine Contour uses no needles and has no discomfort. The treatment is efficient and takes less than an hour.",
+        benefits: [
+          {
+            id: 1,
+            icon: Shrink,
+            title: "Non-Invasive Relaxation",
+            description:
+              "A relaxing experience that uses no needles and causes no discomfort.",
+          },
+          {
+            id: 2,
+            icon: Clock,
+            title: "Zero Downtime",
+            description:
+              "Return to your daily routine immediately after the session.",
+          },
+          {
+            id: 3,
+            icon: Flame,
+            title: "Double Chin Reduction",
+            description:
+              "Targeted technology to reduce submental fullness effectively.",
+          },
+          {
+            id: 4,
+            icon: Activity,
+            title: "Collagen Stimulation",
+            description:
+              "Promotes natural collagen production for long-lasting firmness.",
+          },
+          {
+            id: 5,
+            icon: Flower2,
+            title: "Quick Visible Results",
+            description:
+              "Sessions take less than an hour with fast, noticeable improvements.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How soon will I see results?",
+            answer:
+              "Visible results are usually seen after just one session, with continued improvements as collagen production increases.",
+          },
+          {
+            id: 2,
+            question: "Is the treatment painful?",
+            answer:
+              "Not at all! The process involves a gentle warming sensation that feels more like a relaxing facial massage.",
+          },
+          {
+            id: 3,
+            question: "How long do the results last?",
+            answer:
+              "Results can last for months, especially when combined with a healthy lifestyle and proper skincare.",
+          },
+          {
+            id: 4,
+            question: "Can this work for all skin types?",
+            answer:
+              "Yes! JawDefine Contour is safe and effective for all skin tones and types.",
+          },
+          {
+            id: 5,
+            question: "How many sessions will I need?",
+            answer:
+              "While some notice improvements after one session, a series of treatments delivers the most sculpted and long-lasting results.",
+          },
+        ],
+      },
+    },
+    Lipo: {
+      hero: {
+        title: "Lipo Contour",
+        description:
+          "Even with consistent workouts and a disciplined diet, some areas of stubborn fat refuse to budge. That’s where Lipo Contour comes in. It is a revolutionary inch-loss and body-sculpting treatment that melts fat, tones skin, and boosts metabolism effortlessly.",
+        image: JawDefine,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "Using the power of LipoMax Pro Light and Therma Wrap, this treatment shrinks fat cells naturally, prompting the body to flush them out.",
+          },
+          {
+            id: 2,
+            description:
+              "The Therma Wrap enhance circulation, promote detoxification, and accelerate calorie burn, leaving the body looking sculpted, contoured, and visibly slimmer.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose Lipo Contour?",
+        subtitle:
+          "JawDefine Contour uses no needles and has no discomfort. The treatment is efficient and takes less than an hour.",
+        benefits: [
+          {
+            id: 1,
+            icon: FrameIcon,
+            title: "10D Laser Precision",
+            description:
+              "Targets fat cells with high accuracy for maximum inch loss.",
+          },
+          {
+            id: 2,
+            icon: Expand,
+            title: "Skin Elasticity",
+            description:
+              "Improves skin tone and tightness alongside fat reduction.",
+          },
+          {
+            id: 3,
+            icon: Flame,
+            title: "Non-Invasive Relaxation",
+            description:
+              "A comfortable procedure with zero downtime or surgical risks.",
+          },
+          {
+            id: 4,
+            icon: Eye,
+            title: "Visible Results",
+            description:
+              "Noticeable contouring and inch loss often seen after initial sessions.",
+          },
+          {
+            id: 5,
+            icon: User,
+            title: "Personalized Shaping",
+            description:
+              "Tailored treatment plans to address your specific problem areas.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How soon can results be seen?",
+            answer:
+              "People start to notice a difference after just one session, with optimal results appearing after multiple treatments as the body naturally eliminates fat cells.",
+          },
+          {
+            id: 2,
+            question: "Is this treatment safe for all body types?",
+            answer:
+              "Yes! Lipo Contour is a non-invasive and gentle treatment, making it safe and effective for all body types.",
+          },
+          {
+            id: 3,
+            question: "Will the therma wrap feel uncomfortable?",
+            answer:
+              "Not at all! The heat level is adjustable, ensuring a pleasant and soothing experience while maximizing fat burn and detox benefits.",
+          },
+          {
+            id: 4,
+            question: "How long do the results last?",
+            answer:
+              "Results are long-lasting, especially when combined with a healthy lifestyle and proper hydration to maintain the body’s fat-burning efficiency.",
           },
         ],
       },
