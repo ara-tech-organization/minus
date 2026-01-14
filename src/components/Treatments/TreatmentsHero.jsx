@@ -42,7 +42,7 @@ useEffect(() => {
 
 return (
   <>
-    <div className={styles.heroSection}>
+    <div id="treatments" className={styles.heroSection}>
       <div className={styles.heroOverlay}></div>
       <img src={Treatmenthero} alt="Treatments" className={styles.heroImage} />
 

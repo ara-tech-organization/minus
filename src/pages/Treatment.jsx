@@ -19,6 +19,7 @@ const Treatment = () => {
 
   return (
     <div id="treatments">
+      
       <TreatmentsHero />
 
       <div data-aos="fade-up" data-aos-delay="200">

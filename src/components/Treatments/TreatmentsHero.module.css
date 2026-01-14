@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: visible;
+    overflow: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
@@ -29,6 +29,7 @@ background: linear-gradient(to right,
             rgba(0, 0, 0, 0.795) 70%,
             rgba(0, 0, 0, 0.65) 100%);
     z-index: 1;
+    overflow: hidden;
 }
 
 .heroContent {
