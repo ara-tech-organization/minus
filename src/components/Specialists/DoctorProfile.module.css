@@ -1,0 +1,798 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 72.5%;
+  height: 700px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.imageSection {
+  position: relative;
+  background: linear-gradient(135deg, #e8ecf3 0%, #d5dce8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 105%;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.doctorImage {
+  width: 110%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.imageWrapper:hover .doctorImage {
+  transform: scale(1.02);
+}
+
+.geometricPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  transform-origin: center;
+}
+
+.line:nth-child(1) {
+  width: 200%;
+  height: 2px;
+  top: 20%;
+  left: -50%;
+  transform: rotate(-25deg);
+  animation: lineSlide1 3s ease-in-out infinite;
+}
+
+.line:nth-child(2) {
+  width: 200%;
+  height: 2px;
+  top: 40%;
+  left: -50%;
+  transform: rotate(-25deg);
+  animation: lineSlide2 3s ease-in-out infinite;
+}
+
+.line:nth-child(3) {
+  width: 200%;
+  height: 2px;
+  top: 60%;
+  left: -50%;
+  transform: rotate(-25deg);
+  animation: lineSlide1 3s ease-in-out infinite;
+}
+
+.line:nth-child(4) {
+  width: 200%;
+  height: 2px;
+  top: 80%;
+  left: -50%;
+  transform: rotate(-25deg);
+  animation: lineSlide2 3s ease-in-out infinite;
+}
+
+@keyframes lineSlide1 {
+  0%, 100% {
+    transform: rotate(-25deg) translateX(0);
+  }
+  50% {
+    transform: rotate(-25deg) translateX(20px);
+  }
+}
+
+@keyframes lineSlide2 {
+  0%, 100% {
+    transform: rotate(-25deg) translateX(0);
+  }
+  50% {
+    transform: rotate(-25deg) translateX(-20px);
+  }
+}
+
+.contentSection {
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header {
+  margin-bottom: 12px;
+}
+
+.label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #666;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 40px;
+  animation: fadeInLabel 0.6s ease-out 0.4s both;
+}
+
+@keyframes fadeInLabel {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 2px;
+  background: #666;
+}
+
+.name {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+  animation: fadeInText 0.6s ease-out 0.5s both;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin: 0 0 24px 0;
+  text-transform: uppercase;
+  animation: fadeInText 0.6s ease-out 0.6s both;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0 0 18px 0;
+  animation: fadeInText 0.6s ease-out 0.7s both;
+}
+
+.expertise {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0 0 32px 0;
+  animation: fadeInText 0.6s ease-out 0.8s both;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInText 0.6s ease-out 0.9s both;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.button:hover::before {
+  left: 100%;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.button:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+
+/* 320px - 375px - Extra Small Mobile, Center Aligned */
+@media (min-width: 320px) and (max-width: 375px) {
+  .container {
+    padding: 20px 12px;
+    min-height: 100vh;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+
+  .imageSection {
+    padding: 30px 20px;
+    min-height: 280px;
+  }
+
+  .imageWrapper {
+    width: 95%;
+    max-width: 240px;
+  }
+
+  .doctorImage {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .contentSection {
+    padding: 30px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .label {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    padding-left: 0;
+  }
+
+  .label::before {
+    display: none;
+  }
+
+  .name {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    margin-bottom: 18px;
+  }
+
+  .description,
+  .expertise {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 13px;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .arrow {
+    font-size: 16px;
+  }
+}
+
+/* 376px - 480px - Small Mobile */
+@media (min-width: 376px) and (max-width: 480px) {
+  .container {
+    padding: 20px 14px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+
+  .imageSection {
+    padding: 35px 25px;
+    min-height: 300px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .doctorImage {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .contentSection {
+    padding: 35px 25px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .label {
+    font-size: 9.5px;
+    letter-spacing: 1.3px;
+    padding-left: 0;
+  }
+
+  .label::before {
+    display: none;
+  }
+
+  .name {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 10.5px;
+    margin-bottom: 20px;
+  }
+
+  .description,
+  .expertise {
+    font-size: 13.5px;
+    line-height: 1.65;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    padding: 13px 26px;
+    font-size: 13.5px;
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .arrow {
+    font-size: 16px;
+  }
+}
+
+/* 481px - 640px - Large Mobile */
+@media (min-width: 481px) and (max-width: 640px) {
+  .container {
+    padding: 25px 16px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 95%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 18px;
+    margin: 0 auto;
+  }
+
+  .imageSection {
+    padding: 40px 30px;
+    min-height: 340px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .doctorImage {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .contentSection {
+    padding: 40px 30px;
+  }
+
+  .label {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    padding-left: 35px;
+  }
+
+  .label::before {
+    width: 25px;
+  }
+
+  .name {
+    font-size: 32px;
+    margin-bottom: 11px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    margin-bottom: 22px;
+  }
+
+  .description,
+  .expertise {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  .expertise {
+    margin-bottom: 28px;
+  }
+
+  .button {
+    padding: 14px 28px;
+    font-size: 13.5px;
+  }
+
+  .arrow {
+    font-size: 17px;
+  }
+}
+
+/* 641px - 768px - Tablet Portrait */
+@media (min-width: 641px) and (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 90%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 18px;
+  }
+
+  .imageSection {
+    padding: 45px 35px;
+    min-height: 380px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .contentSection {
+    padding: 45px 40px;
+  }
+
+  .label {
+    font-size: 10.5px;
+    letter-spacing: 1.45px;
+    padding-left: 38px;
+  }
+
+  .label::before {
+    width: 28px;
+  }
+
+  .name {
+    font-size: 36px;
+    margin-bottom: 11px;
+  }
+
+  .subtitle {
+    font-size: 11.5px;
+    margin-bottom: 23px;
+  }
+
+  .description,
+  .expertise {
+    font-size: 14.5px;
+    line-height: 1.68;
+    margin-bottom: 17px;
+  }
+
+  .expertise {
+    margin-bottom: 30px;
+  }
+
+  .button {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+
+  .arrow {
+    font-size: 17px;
+  }
+}
+
+/* 769px - 900px - Tablet Landscape / Small Desktop */
+@media (min-width: 769px) and (max-width: 900px) {
+  .container {
+    padding: 35px 25px;
+  }
+
+  .card {
+    grid-template-columns: 1fr 1fr;
+    width: 85%;
+    max-width: 850px;
+    height: 620px;
+    border-radius: 18px;
+  }
+
+  .imageSection {
+    padding: 40px 30px;
+  }
+
+  .imageWrapper {
+    width: 105%;
+  }
+
+  .doctorImage {
+    width: 108%;
+  }
+
+  .contentSection {
+    padding: 50px 40px;
+  }
+
+  .label {
+    font-size: 10.5px;
+    letter-spacing: 1.45px;
+    padding-left: 38px;
+  }
+
+  .label::before {
+    width: 28px;
+  }
+
+  .name {
+    font-size: 38px;
+    margin-bottom: 11px;
+  }
+
+  .subtitle {
+    font-size: 11.5px;
+    margin-bottom: 23px;
+  }
+
+  .description,
+  .expertise {
+    font-size: 14.5px;
+    line-height: 1.68;
+    margin-bottom: 17px;
+  }
+
+  .expertise {
+    margin-bottom: 30px;
+  }
+
+  .button {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+}
+
+/* 901px - 1040px - Standard Desktop Transition */
+@media (min-width: 901px) and (max-width: 1040px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .card {
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    max-width: 1000px;
+    height: 760px;
+    border-radius: 20px;
+  }
+
+  .imageSection {
+    padding: 45px 35px;
+  }
+
+  .imageWrapper {
+  width: 100%;              
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctorImage {
+  width: 90%;               
+  max-width: 420px;         
+  height: auto;
+  object-fit: contain;      
+}
+
+
+  .contentSection {
+    padding: 55px 45px;
+  }
+
+  .label {
+    font-size: 10.8px;
+    letter-spacing: 1.48px;
+    padding-left: 39px;
+  }
+
+  .label::before {
+    width: 29px;
+  }
+
+  .name {
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 11.8px;
+    margin-bottom: 24px;
+  }
+
+  .description,
+  .expertise {
+    font-size: 14.8px;
+    line-height: 1.69;
+    margin-bottom: 17.5px;
+  }
+
+  .expertise {
+    margin-bottom: 31px;
+  }
+
+  .button {
+    padding: 15.5px 31px;
+    font-size: 14px;
+  }
+}
+
+/* 1041px+ - Full Desktop */
+@media (min-width: 1041px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    width: 72.5%;
+    max-width: 1000px;
+    height: 650px;
+  }
+.imageWrapper {
+  width: 101%;
+  height: 785px;
+  overflow: hidden;
+}
+
+.doctorImage {
+  max-width: 560px;
+  height: 760px;
+  object-fit: contain;
+}
+
+  .contentSection {
+    padding: 60px 50px;
+  }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    padding-left: 40px;
+  }
+
+  .label::before {
+    width: 30px;
+  }
+
+  .name {
+    font-size: 42px;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .description,
+  .expertise {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .expertise {
+    margin-bottom: 32px;
+  }
+
+  .button {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+}

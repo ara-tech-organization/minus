@@ -1,0 +1,336 @@
+/* ================= BASE ================= */
+.container {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1a1a1a 0%, #666 100%);
+  border-radius: 2px;
+}
+
+/* ================= DESKTOP GRID ================= */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+/* ================= CARD ================= */
+.productCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  padding: 20px;
+}
+
+.productName {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  min-height: 54px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addToCartBtn {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 11px;
+  border-radius: 4px;
+}
+
+/* ================= SLIDER BASE ================= */
+.sliderContainer {
+  position: relative;
+  margin-top: 40px;
+  padding: 0 50px;
+}
+
+.sliderWrapper {
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.sliderArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  border: none;
+}
+
+.sliderArrowLeft { left: 0; }
+.sliderArrowRight { right: 0; }
+
+.sliderDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+/* ================= 1024px FIX ================= */
+@media (max-width: 1200px) {
+  .productsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  /* Tablet ONLY */
+  .productCard {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* ================= MOBILE (≤768) ================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .title::after {
+    display: none;
+  }
+
+  .sliderContainer {
+    padding: 0 35px;
+  }
+
+  .imageWrapper {
+    max-height: 220px;
+  }
+
+  .productImage {
+    object-fit: contain;
+  }
+}
+
+/* ================= SMALL MOBILE FIX (≤375px) ================= */
+@media (max-width: 375px) {
+
+
+  .productCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sliderWrapper {
+    overflow: hidden;
+  }
+
+  .sliderContainer {
+    padding: 0 8px !important;
+  }
+
+  /* reduce text height */
+  .productName {
+    -webkit-line-clamp: 1;
+    min-height: auto;
+  }
+
+  .imageWrapper {
+    max-height: 180px;
+    aspect-ratio: auto;
+  }
+
+  .sliderArrowLeft { left: 6px; }
+  .sliderArrowRight { right: 6px; }
+}
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= TITLE ANIMATION ================= */
+.title {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.productCard {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease-out backwards;
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= IMAGE ZOOM ON HOVER ================= */
+.productImage {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.08);
+}
+
+.addToCartBtn {
+  transition: background 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.addToCartBtn:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.addToCartBtn:active {
+  transform: translateY(0);
+}
+/* ================= CLEAR SHINE EFFECT ================= */
+
+.productCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.productCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.8s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.productCard:hover::before {
+  left: 130%;
+}
+/* ================= DISABLED ADD TO CART ================= */
+
+.addToCartBtn {
+  pointer-events: none;       
+  cursor: not-allowed;
+  opacity: 0.55;              
+  background: #1a1a1a;         
+  box-shadow: none;
+  transform: none;
+}
+
+.addToCartBtn:hover,
+.addToCartBtn:active {
+  background: #1a1a1a;
+  transform: none;
+  box-shadow: none;
+}

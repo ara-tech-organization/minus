@@ -8,6 +8,8 @@ import Testimonial from "./pages/Testimonial";
 import Contact from "./pages/Contact";
 import DetailsPage from "./components/TreatmentDetails/Details";
 
+import Specialists from "./pages/Specialists";
+import Supplements from "./pages/Supplements";
 function App() {
   return (
     <Router>
@@ -21,6 +23,9 @@ function App() {
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/treatment/:id" element={<DetailsPage />} />
+        <Route path="/specialists" element={<Specialists />} />
+        <Route path="/supplements" element={<Supplements />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
