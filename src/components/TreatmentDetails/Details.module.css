@@ -1,0 +1,481 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ .container {
+     width: 100%;
+     font-family: 'Arial', sans-serif;
+     color: #333;
+ }
+
+ /* ============= HERO SECTION ============= */
+ .heroSection {
+     background: linear-gradient(135deg, #f5f0ed 0%, #ffffff 100%);
+     padding: 60px 20px;
+     animation: fadeIn 0.8s ease-in;
+    margin-top: 100px;
+ }
+
+ .heroContent {
+     max-width: 1200px;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     gap: 60px;
+ }
+
+ .heroImage {
+     flex: 1;
+     animation: slideInLeft 1s ease-out;
+ }
+
+ .heroImage img {
+     width: 100%;
+     height: auto;
+     border-radius: 8px;
+     /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); */
+     transition: transform 0.3s ease;
+ }
+
+ .heroImage img:hover {
+     transform: scale(1.02);
+ }
+
+ .heroText {
+     flex: 1;
+     animation: slideInRight 1s ease-out;
+ }
+
+ .heroTitle {
+     font-size: 48px;
+     font-weight: 700;
+     margin-bottom: 20px;
+     color: #1a1a1a;
+     letter-spacing: -1px;
+ }
+
+ .heroDescription {
+     font-size: 16px;
+     line-height: 1.8;
+     color: #555;
+     margin-bottom: 30px;
+ }
+
+ .heroButtons {
+     display: flex;
+     gap: 15px;
+ }
+
+ .heroButton {
+     padding: 14px 28px;
+     font-size: 12px;
+     font-weight: 700;
+     border: none;
+     cursor: pointer;
+     letter-spacing: 1px;
+     transition: all 0.3s ease;
+     border-radius: 4px;
+ }
+
+ .primaryButton {
+     background: #000;
+     color: #fff;
+ }
+
+ .primaryButton:hover {
+     background: #333;
+     transform: translateY(-2px);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ }
+
+ .secondaryButton {
+     background: transparent;
+     color: #000;
+     border: 2px solid #000;
+ }
+
+ .secondaryButton:hover {
+     background: #000;
+     color: #fff;
+     transform: translateY(-2px);
+ }
+
+ /* ============= HOW IT WORKS ============= */
+ .howItWorks {
+     background: #000;
+     color: #fff;
+     padding: 80px 20px;
+     text-align: center;
+     animation: fadeIn 1s ease-in;
+ }
+
+ .sectionTitle {
+     font-size: 24px;
+     font-weight: 700;
+     letter-spacing: 2px;
+     margin-bottom: 20px;
+     color: white;
+ }
+
+ .howItWorksGrid {
+     max-width: 1200px;
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 40px;
+     margin-top: 20px;
+ }
+.howItWorksCard:first-child {
+    position: relative;
+    padding-right: 30px;
+}
+
+.howItWorksCard:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #dcdcdc;
+    opacity: 0.6;
+}
+ .howItWorksCard {
+     animation: fadeInUp 1.2s ease-out;
+     transition: transform 0.3s ease;
+ }
+
+ .howItWorksCard:hover {
+     transform: translateY(-5px);
+ }
+
+ .howItWorksText {
+     font-size: 15px;
+     line-height: 1.8;
+     color: #ffffff;
+     text-align: left;
+ }
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 20px 0;
+    opacity: 0.6;
+}
+ /* ============= WHY CHOOSE ============= */
+ .whyChoose {
+     background: #fff;
+     padding: 80px 20px;
+     text-align: center;
+     animation: fadeIn 1s ease-in;
+ }
+
+ .howsectionTitle {
+     color: #ffffff;
+ }
+
+  .sectionTitle {
+      color: #000000;
+  }
+
+ .whyChooseSubtitle {
+     font-size: 14px;
+     color: #666;
+     margin-bottom: 50px;
+     font-style: italic;
+ }
+
+.benefitsGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    display: flex;
+}
+
+ .benefitCard {
+     text-align: center;
+     animation: fadeInUp 1.4s ease-out;
+     transition: transform 0.3s ease;
+     background-color: #F9FAFB;
+     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    text-align: center;
+ }
+
+ .benefitCard:hover {
+     transform: translateY(-8px);
+ }
+
+ .benefitCard:hover .benefitNumber {
+     background: #000;
+     color: #fff;
+ }
+
+ .benefitNumber {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background: #f0f0f0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto 20px;
+     font-size: 24px;
+     font-weight: 700;
+     transition: all 0.3s ease;
+ }
+
+ .benefitTitle {
+     font-size: 14px;
+     font-weight: 700;
+     letter-spacing: 1px;
+     margin-bottom: 12px;
+ }
+
+ .benefitDescription {
+     font-size: 13px;
+     line-height: 1.6;
+     color: #666;
+ }
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    line-height: 0;
+    /* <-- prevents icon from shifting */
+}
+ /* ============= FAQ ============= */
+ .faq {
+     background: #000;
+     color: #fff;
+     padding: 80px 20px;
+     animation: fadeIn 1s ease-in;
+ }
+
+ .faq .sectionTitle {
+     text-align: center;
+     color: #fff;
+     margin-bottom: 10px;
+ }
+
+ .faqList {
+     max-width: 900px;
+     margin: 0 auto;
+ }
+
+ .faqItem {
+     border-bottom: 1px solid #333;
+     animation: fadeInUp 1.6s ease-out;
+ }
+
+ .faqQuestion {
+     width: 100%;
+     padding: 25px 0;
+     background: transparent;
+     border: none;
+     color: #fff;
+     font-size: 15px;
+     text-align: left;
+     cursor: pointer;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     transition: color 0.3s ease;
+ }
+
+ .faqQuestion:hover {
+     color: #ccc;
+ }
+
+ .faqIcon {
+     width: 20px;
+     height: 20px;
+     transition: transform 0.3s ease;
+ }
+
+ .faqIconOpen {
+     transform: rotate(180deg);
+ }
+
+.faqAnswer {
+    padding-bottom: 20px;
+    overflow: visible;
+    max-height: none;
+    transition: none;
+}
+
+ .faqItemOpen .faqAnswer {
+     max-height: 200px;
+     padding-bottom: 25px;
+ }
+
+ .faqAnswer p {
+     font-size: 14px;
+     line-height: 1.7;
+     color: #ccc;
+ }
+
+ /* ============= BOOKING ============= */
+ .booking {
+     background: #fff;
+     padding: 80px 20px;
+     text-align: center;
+     animation: fadeIn 1s ease-in;
+ }
+
+ .booking .sectionTitle {
+     color: #000;
+     margin-bottom: 50px;
+ }
+
+ .bookingForm {
+     max-width: 800px;
+     margin: 0 auto;
+     display: flex;
+     gap: 15px;
+     animation: fadeInUp 1.8s ease-out;
+ }
+
+ .formInput {
+     flex: 1;
+     padding: 16px;
+     border: 1px solid #ddd;
+     font-size: 14px;
+     transition: border-color 0.3s ease;
+ }
+
+ .formInput:focus {
+     outline: none;
+     border-color: #000;
+ }
+
+ .bookButton {
+     padding: 16px 40px;
+     background: #000;
+     color: #fff;
+     border: none;
+     font-size: 12px;
+     font-weight: 700;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ .bookButton:hover {
+     background: #333;
+     transform: translateY(-2px);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ }
+
+ /* ============= ANIMATIONS ============= */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @keyframes slideInLeft {
+     from {
+         opacity: 0;
+         transform: translateX(-50px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+ @keyframes slideInRight {
+     from {
+         opacity: 0;
+         transform: translateX(50px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* ============= RESPONSIVE ============= */
+ @media (max-width: 968px) {
+     .heroContent {
+         flex-direction: column;
+     }
+
+     .howItWorksGrid {
+         grid-template-columns: 1fr;
+     }
+
+     .benefitsGrid {
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     .bookingForm {
+         flex-direction: column;
+     }
+ }
+
+ @media (max-width: 600px) {
+     .heroTitle {
+         font-size: 36px;
+     }
+
+     .benefitsGrid {
+         grid-template-columns: 1fr;
+     }
+ }
+
+ /* Large Tablets (3 columns) */
+ @media (max-width: 1200px) {
+     .benefitsGrid {
+         grid-template-columns: repeat(3, 1fr);
+     }
+ }
+
+ /* Tablets (2 columns) */
+ @media (max-width: 900px) {
+     .benefitsGrid {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 25px;
+     }
+ }
+
+ /* Mobile (1 column) */
+ @media (max-width: 600px) {
+     .benefitsGrid {
+         grid-template-columns: 1fr;
+         gap: 20px;
+         display: block;
+     }
+ }

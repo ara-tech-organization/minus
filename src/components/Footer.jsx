@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-
+import logo from "@/assets/logo.webp"
 const Footer = () => {
   const quicklinks = [
     { label: "Home", href: "#" },
@@ -28,11 +28,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className={styles.brandColumn}>
             <div className={styles.logo}>
-              <img
-                src="/assets/logo.webp"
-                alt="Minus"
-                className={styles.logoImage}
-              />
+              <img src={logo} alt="Minus" className={styles.logoImage} />
             </div>
             <p className={styles.brandDescription}>
               Minus is a cutting-edge slimming and body contouring brand that

@@ -1,0 +1,142 @@
+.section {
+    position: relative;
+    width: 100%;
+    padding: 6rem 1rem;
+    background: #f7f7f7;
+    text-align: center;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Left Blur */
+.blurLeft {
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #e7e7e7 0%, #f7f7f7 70%);
+    filter: blur(120px);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* Right Blur */
+.blurRight {
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #e7e7e7 0%, #f7f7f7 70%);
+    filter: blur(120px);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.contentWrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* BUTTON BASE */
+.btn {
+    padding: 0.85rem 1.8rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* PRIMARY */
+.primaryBtn {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.primaryBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+/* OUTLINE */
+.outlineBtn {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #111;
+}
+
+.outlineBtn:hover {
+    border-color: #111;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
