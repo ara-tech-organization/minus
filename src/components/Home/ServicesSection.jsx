@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./ServicesSection.module.css";
 import BodyLiftImage from "@/assets/Body-lift.png";
 import LiposuctionImage from "@/assets/Liposuction.png";
-import InjectionImage from "@/assets/Injection.png";  
+import InjectionImage from "@/assets/Injection.png";
+import { ArrowRightIcon } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
@@ -149,6 +150,27 @@ const ServicesSection = () => {
               </div>
             </div>
           ))}
+        </div>
+        {/* VIEW MORE BUTTON */}
+        <div className={styles.viewMoreWrapper}>
+          <a href="/minus/#testimonial" className={styles.viewMoreBtn}>
+            View More Services
+            <svg
+              className={styles.viewMoreArrow}
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M6 4L10 8L6 12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

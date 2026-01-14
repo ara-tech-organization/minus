@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./HolisticApproach.module.css";
-import Holistic from "@/assets/Holistic.png";
+import Holistic from "../../assets/Similarity img.png";
 const HolisticApproach = () => {
   const [isVisible, setIsVisible] = useState(false);
 

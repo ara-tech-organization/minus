@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./PatientTestimonials.module.css";
-import FacialContouring from "@/assets/Facial-contouring.png";
+import PatientA from "../../assets/r1.png";
+import PatientB from "../../assets/r2.png";
+import PatientC from "../../assets/r3.png";
 
 const PatientTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,7 +11,7 @@ const PatientTestimonials = () => {
   const testimonials = [
     {
       id: 1,
-      image: FacialContouring,
+      image: PatientA,
       patient: "Patient A",
       duration: "12 Weeks",
       treatment: "Targeted Abdominal Sculpting",
@@ -17,7 +19,7 @@ const PatientTestimonials = () => {
     },
     {
       id: 2,
-      image: FacialContouring,
+      image: PatientB,
       patient: "Patient B",
       duration: "8 Weeks",
       treatment: "Lower Body Contouring",
@@ -25,36 +27,36 @@ const PatientTestimonials = () => {
     },
     {
       id: 3,
-      image: FacialContouring,
+      image: PatientC,
       patient: "Patient C",
       duration: "16 Weeks",
       treatment: "Full Body Transformation",
       type: "single",
     },
-    {
-      id: 4,
-      image: FacialContouring,
-      patient: "Patient D",
-      duration: "10 Weeks",
-      treatment: "Facial Contouring",
-      type: "single",
-      },
-    {
-      id: 5,
-      image: FacialContouring,
-      patient: "Patient D",
-      duration: "10 Weeks",
-      treatment: "Facial Contouring",
-      type: "single",
-      },
-    {
-      id: 6,
-      image: FacialContouring,
-      patient: "Patient D",
-      duration: "10 Weeks",
-      treatment: "Facial Contouring",
-      type: "single",
-    },
+    // {
+    //   id: 4,
+    //   image: FacialContouring,
+    //   patient: "Patient D",
+    //   duration: "10 Weeks",
+    //   treatment: "Facial Contouring",
+    //   type: "single",
+    //   },
+    // {
+    //   id: 5,
+    //   image: FacialContouring,
+    //   patient: "Patient D",
+    //   duration: "10 Weeks",
+    //   treatment: "Facial Contouring",
+    //   type: "single",
+    //   },
+    // {
+    //   id: 6,
+    //   image: FacialContouring,
+    //   patient: "Patient D",
+    //   duration: "10 Weeks",
+    //   treatment: "Facial Contouring",
+    //   type: "single",
+    // },
   ];
 
   const handlePrev = () => {
@@ -77,10 +79,10 @@ const PatientTestimonials = () => {
 
   const getVisibleCards = () => {
     const cards = [];
-  for (let i = 0; i < 4; i++) {
-    const index = (currentIndex + i) % testimonials.length;
-    cards.push(testimonials[index]);
-  }
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % testimonials.length;
+      cards.push(testimonials[index]);
+    }
     return cards;
   };
 
@@ -168,7 +170,7 @@ const PatientTestimonials = () => {
                   </div> */}
                 </div>
               ) : (
-                <div className={styles.imageContainer}>
+                <div className={styles.singleImageWrapper}>
                   <img
                     src={testimonial.image}
                     alt={`${testimonial.patient} before`}
