@@ -36,13 +36,21 @@ const BodyContouringHero = () => {
           <div className={styles["button-group"]}>
             <button
               className={styles["cta-button"]}
+              onClick={() => {
+                window.location.href = "/#contact";
+              }}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               Get Started Today
             </button>
 
-            <button className={styles["services-button"]}>
+            <button
+              className={styles["services-button"]}
+              onClick={() => {
+                window.location.href = "/#treatments";
+              }}
+            >
               Our Services
               <svg
                 className={styles["arrow-icon"]}
@@ -61,6 +69,10 @@ const BodyContouringHero = () => {
               </svg>
             </button>
           </div>
+
+          {/* </svg>
+            </button> */}
+          {/* </div> */}
         </div>
 
         {/* Right Image Section */}

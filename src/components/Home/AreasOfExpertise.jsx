@@ -13,7 +13,6 @@ import AbdomenImg from "../../assets/Abdomen.png";
 import ThighsImg from "../../assets/Thighs.png";
 import ButtocksImg from "../../assets/Buttocks.png";
 
-
 const AreasOfExpertise = () => {
   const [activeArea, setActiveArea] = useState("face");
 
@@ -52,78 +51,78 @@ const AreasOfExpertise = () => {
   ];
 
   const contentData = {
-  face: {
-    title: "Face",
-    description:
-      "Our facial contouring procedures address concerns like double chin, sagging jowls, and loss of jawline definition.",
-    image: FaceImg,
-    benefits: [
-      "No downtime required",
-      "Visible results in 2-4 sessions",
-      "Safe, FDA-approved technology",
-    ],
-  },
+    face: {
+      title: "Face",
+      description:
+        "Our facial contouring procedures address concerns like double chin, sagging jowls, and loss of jawline definition.",
+      image: FaceImg,
+      benefits: [
+        "No downtime required",
+        "Visible results in 2-4 sessions",
+        "Safe, FDA-approved technology",
+      ],
+    },
 
-  arms: {
-    title: "Arm Sculpting",
-    description:
-      "Target stubborn arm fat and achieve toned, defined arms with advanced contouring treatments.",
-    image: ArmsImg,
-    benefits: [
-      "Non-invasive treatment",
-      "Results visible in 3-5 sessions",
-      "Minimal recovery time",
-    ],
-  },
+    arms: {
+      title: "Arm Sculpting",
+      description:
+        "Target stubborn arm fat and achieve toned, defined arms with advanced contouring treatments.",
+      image: ArmsImg,
+      benefits: [
+        "Non-invasive treatment",
+        "Results visible in 3-5 sessions",
+        "Minimal recovery time",
+      ],
+    },
 
-  abdomen: {
-    title: "Abdomen Contouring",
-    description:
-      "Sculpt and define your midsection with targeted abdominal treatments.",
-    image: AbdomenImg,
-    benefits: [
-      "Target specific problem areas",
-      "Visible results in 4-6 sessions",
-      "Clinically proven methods",
-    ],
-  },
+    abdomen: {
+      title: "Abdomen Contouring",
+      description:
+        "Sculpt and define your midsection with targeted abdominal treatments.",
+      image: AbdomenImg,
+      benefits: [
+        "Target specific problem areas",
+        "Visible results in 4-6 sessions",
+        "Clinically proven methods",
+      ],
+    },
 
-  thighs: {
-    title: "Thighs",
-    description:
-      "Achieve smoother, more contoured thighs and buttocks with specialized treatments.",
-    image: ThighsImg,
-    benefits: [
-      "Lower body sculpting",
-      "Results in 4-6 sessions",
-      "Safe & effective",
-    ],
-  },
+    thighs: {
+      title: "Thighs",
+      description:
+        "Achieve smoother, more contoured thighs and buttocks with specialized treatments.",
+      image: ThighsImg,
+      benefits: [
+        "Lower body sculpting",
+        "Results in 4-6 sessions",
+        "Safe & effective",
+      ],
+    },
 
-  neck: {
-    title: "Neck Contouring",
-    description:
-      "Refine and tighten the neck area by targeting stubborn fat and improving skin firmness for a more youthful profile.",
-    image: NeckImg,
-    benefits: [
-      "Reduces double chin appearance",
-      "Non-surgical & painless",
-      "Visible tightening in 3-5 sessions",
-    ],
-  },
+    neck: {
+      title: "Neck Contouring",
+      description:
+        "Refine and tighten the neck area by targeting stubborn fat and improving skin firmness for a more youthful profile.",
+      image: NeckImg,
+      benefits: [
+        "Reduces double chin appearance",
+        "Non-surgical & painless",
+        "Visible tightening in 3-5 sessions",
+      ],
+    },
 
-  buttocks: {
-    title: "Buttocks Sculpting",
-    description:
-      "Enhance shape and smoothness of the buttocks with advanced body contouring treatments.",
-    image: ButtocksImg,
-    benefits: [
-      "Improves contour & firmness",
-      "Targets localized fat deposits",
-      "Safe, non-invasive procedure",
-    ],
-  },
-};
+    buttocks: {
+      title: "Buttocks Sculpting",
+      description:
+        "Enhance shape and smoothness of the buttocks with advanced body contouring treatments.",
+      image: ButtocksImg,
+      benefits: [
+        "Improves contour & firmness",
+        "Targets localized fat deposits",
+        "Safe, non-invasive procedure",
+      ],
+    },
+  };
 
   const currentContent = contentData[activeArea];
 
@@ -194,7 +193,14 @@ const AreasOfExpertise = () => {
                   ))}
                 </ul>
 
-                <button className={styles.ctaButton}>Explore Procedure</button>
+                <button
+                  className={styles.ctaButton}
+                  onClick={() => {
+                    window.location.href = "/#treatments";
+                  }}
+                >
+                  Explore Procedure
+                </button>
               </div>
 
               <div className={styles.imageContent}>
