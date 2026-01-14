@@ -105,10 +105,13 @@ const Footer = () => {
                 Karumariamman Nagar Extension, Velachery, Chennai, Tamil Nadu
                 600042
               </p>
-              <p className={styles.addressText}>
+              {/* <p className={styles.addressText}>
                 Landmark: Before TAJ Coromandel
-              </p>
-              <a href="#" className={styles.directionsLink}>
+              </p> */}
+              <a
+                href="https://www.google.com/maps?sca_esv=af5f13c89ec90bf9&rlz=1C1VDKB_enIN1088IN1088&cs=1&kgmid=/g/11xzhqhfh3&shem=bdslc,epsdc,ptotplc,shrtsdl&shndl=30&kgs=f633783595055f4d&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KRvAEI5LXVI6Mazg6wguW2NC&daddr=Ground+Floor,No.30-30A,+KG+TOWERS,+Velachery+Bypass+Rd,+Devi+Karumariamman+Nagar+Extension,+Velachery,+Chennai,+Tamil+Nadu+600042"
+                className={styles.directionsLink}
+              >
                 View Directions
               </a>
             </address>
