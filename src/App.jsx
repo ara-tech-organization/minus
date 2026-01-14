@@ -10,6 +10,9 @@ import DetailsPage from "./components/TreatmentDetails/Details";
 
 import Specialists from "./pages/Specialists";
 import Supplements from "./pages/Supplements";
+import ViewProfile from "./pages/ViewProfile";
+import NutritionistProfile from "./components/viewprofile/NutritionistProfile";
+
 function App() {
   return (
     <Router>
@@ -17,7 +20,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/about" element={<About />} />
         <Route path="/treatments" element={<Treatment />} />
         <Route path="/testimonial" element={<Testimonial />} />
@@ -25,7 +27,8 @@ function App() {
         <Route path="/treatment/:id" element={<DetailsPage />} />
         <Route path="/specialists" element={<Specialists />} />
         <Route path="/supplements" element={<Supplements />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/viewprofile" element={<ViewProfile />} />
+         <Route path="/nutritionist-profile" element={<NutritionistProfile />} />
       </Routes>
 
       <Footer />
