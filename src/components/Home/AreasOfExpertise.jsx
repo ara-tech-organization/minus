@@ -6,83 +6,124 @@ import {
   AlignCenterVertical,
   StretchVertical,
 } from "lucide-react";
-import FacialContouring from "@/assets/Facial-contouring.png";
+import FaceImg from "../../assets/Face.png";
+import NeckImg from "../../assets/Neck.png";
+import ArmsImg from "../../assets/arms.png";
+import AbdomenImg from "../../assets/Abdomen.png";
+import ThighsImg from "../../assets/Thighs.png";
+import ButtocksImg from "../../assets/Buttocks.png";
 
 
 const AreasOfExpertise = () => {
   const [activeArea, setActiveArea] = useState("face");
 
-const expertiseAreas = [
-  {
-    id: "face",
-    label: "Face & Neck",
-    icon: <User size={20} strokeWidth={1.8} />,
-  },
-  {
-    id: "arms",
-    label: "Arms",
-    icon: <Dumbbell size={20} strokeWidth={1.8} />,
-  },
-  {
-    id: "abdomen",
-    label: "Abdomen",
-    icon: <AlignCenterVertical size={20} strokeWidth={1.8} />,
-  },
-  {
-    id: "thighs",
-    label: "Thighs & Buttocks",
-    icon: <StretchVertical size={20} strokeWidth={1.8} />,
-  },
-];
+  const expertiseAreas = [
+    {
+      id: "face",
+      label: "Face ",
+      icon: <User size={20} strokeWidth={1.8} />,
+    },
+    {
+      id: "neck",
+      label: "Neck",
+      icon: <AlignCenterVertical size={20} strokeWidth={1.8} />,
+    },
+    {
+      id: "arms",
+      label: "Arms",
+      icon: <Dumbbell size={20} strokeWidth={1.8} />,
+    },
+    {
+      id: "abdomen",
+      label: "Abdomen",
+      icon: <AlignCenterVertical size={20} strokeWidth={1.8} />,
+    },
+    {
+      id: "thighs",
+      label: "Thighs",
+      icon: <StretchVertical size={20} strokeWidth={1.8} />,
+    },
 
-
+    {
+      id: "buttocks",
+      label: "Buttocks",
+      icon: <User size={20} strokeWidth={1.8} />,
+    },
+  ];
 
   const contentData = {
-    face: {
-      title: "Face & Neck Contouring",
-      description:
-        "Our facial contouring procedures address concerns like double chin, sagging jowls, and loss of jawline definition. We use a combination of AI-Robotic Sonic Slim and injection lipolysis to reveal your natural bone structure.",
-      image: FacialContouring,
-      benefits: [
-        "No downtime required",
-        "Visible results in 2-4 sessions",
-        "Safe, FDA-approved technology",
-      ],
-    },
-    arms: {
-      title: "Arm Sculpting",
-      description:
-        "Target stubborn arm fat and achieve toned, defined arms with our advanced body contouring treatments. Perfect for addressing concerns in the upper arm area that resist diet and exercise.",
-      image: FacialContouring,
-      benefits: [
-        "Non-invasive treatment",
-        "Results visible in 3-5 sessions",
-        "Minimal recovery time",
-      ],
-    },
-    abdomen: {
-      title: "Abdomen Contouring",
-      description:
-        "Sculpt and define your midsection with targeted abdominal treatments. Our procedures help reduce stubborn belly fat and create a more toned, contoured appearance.",
-      image: FacialContouring,
-      benefits: [
-        "Target specific problem areas",
-        "Visible results in 4-6 sessions",
-        "Clinically proven methods",
-      ],
-    },
-    thighs: {
-      title: "Thighs & Buttocks Shaping",
-      description:
-        "Achieve smoother, more contoured thighs and buttocks with our specialized treatments. Address cellulite, unwanted fat deposits, and skin laxity for a more sculpted lower body.",
-      image: FacialContouring,
-      benefits: [
-        "Comprehensive lower body treatment",
-        "Results in 4-6 sessions",
-        "Safe and effective procedures",
-      ],
-    },
-  };
+  face: {
+    title: "Face",
+    description:
+      "Our facial contouring procedures address concerns like double chin, sagging jowls, and loss of jawline definition.",
+    image: FaceImg,
+    benefits: [
+      "No downtime required",
+      "Visible results in 2-4 sessions",
+      "Safe, FDA-approved technology",
+    ],
+  },
+
+  arms: {
+    title: "Arm Sculpting",
+    description:
+      "Target stubborn arm fat and achieve toned, defined arms with advanced contouring treatments.",
+    image: ArmsImg,
+    benefits: [
+      "Non-invasive treatment",
+      "Results visible in 3-5 sessions",
+      "Minimal recovery time",
+    ],
+  },
+
+  abdomen: {
+    title: "Abdomen Contouring",
+    description:
+      "Sculpt and define your midsection with targeted abdominal treatments.",
+    image: AbdomenImg,
+    benefits: [
+      "Target specific problem areas",
+      "Visible results in 4-6 sessions",
+      "Clinically proven methods",
+    ],
+  },
+
+  thighs: {
+    title: "Thighs",
+    description:
+      "Achieve smoother, more contoured thighs and buttocks with specialized treatments.",
+    image: ThighsImg,
+    benefits: [
+      "Lower body sculpting",
+      "Results in 4-6 sessions",
+      "Safe & effective",
+    ],
+  },
+
+  neck: {
+    title: "Neck Contouring",
+    description:
+      "Refine and tighten the neck area by targeting stubborn fat and improving skin firmness for a more youthful profile.",
+    image: NeckImg,
+    benefits: [
+      "Reduces double chin appearance",
+      "Non-surgical & painless",
+      "Visible tightening in 3-5 sessions",
+    ],
+  },
+
+  buttocks: {
+    title: "Buttocks Sculpting",
+    description:
+      "Enhance shape and smoothness of the buttocks with advanced body contouring treatments.",
+    image: ButtocksImg,
+    benefits: [
+      "Improves contour & firmness",
+      "Targets localized fat deposits",
+      "Safe, non-invasive procedure",
+    ],
+  },
+};
 
   const currentContent = contentData[activeArea];
 
@@ -172,4 +213,3 @@ const expertiseAreas = [
 };
 
 export default AreasOfExpertise;
-
