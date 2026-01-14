@@ -3,7 +3,19 @@ import styles from "./MinimallyInvasive.module.css";
 import minimalInvasive1 from "@/assets/mini-invasive-1.png"
 import minimalInvasive2 from "@/assets/mini-invasive-2.png"
 import minimalInvasive3 from "@/assets/mini-invasive-3.png"
-const TreatmentCard = ({ image, title, description, features, delay }) => {
+import { useNavigate } from "react-router-dom";
+import DeoxycholicAcid from "@/assets/DeoxycholicAcid.png";
+import InjectionLipolysis from "@/assets/InjectionLipolysis.png";
+import LaserLipo from "@/assets/LaserLipo.png";
+
+const TreatmentCard = ({
+  image,
+  title,
+  description,
+  features,
+  delay,
+  onClick,
+}) => {
   return (
     <div className={styles.card} style={{ animationDelay: `${delay}s` }}>
       <div className={styles.imageContainer}>
@@ -20,7 +32,9 @@ const TreatmentCard = ({ image, title, description, features, delay }) => {
             </li>
           ))}
         </ul>
-        <button className={styles.consultBtn}>Book Consultation</button>
+        <button onClick={onClick} className={styles.consultBtn}>
+          Details
+        </button>
       </div>
     </div>
   );
@@ -29,27 +43,36 @@ const TreatmentCard = ({ image, title, description, features, delay }) => {
 const MinimallyInvasive = () => {
   const treatments = [
     {
-      image: minimalInvasive1,
-      title: "Deoxycholic Acid Injection",
+      id: "Deoxycholic",
+      image: DeoxycholicAcid,
+      title: "Deoxycholic Acid Double Chin Reduction",
       description:
-        "A cytolytic drug which, when injected into tissue, physically destroys the cell membrane of fat cells for double chin reduction.",
+        "Excess fat beneath the chin can be difficult to eliminate through diet and exercise ....",
       features: ["30-45 Minute Procedure", "Permanent Results"],
     },
     {
-      image: minimalInvasive2,
+      id: "Injection",
+      image: InjectionLipolysis,
       title: "Injection Lipolysis",
       description:
-        "Chemical substances are injected into the subcutaneous tissue layer to break down fat membranes and emulsify fat cells.",
+        "Some areas of fat just don’t respond to diet and exercise, no matter how much effort is put in ....",
       features: ["Local Anesthesia", "Minimal Downtime"],
     },
     {
-      image: minimalInvasive3,
+      id: "Laser",
+      image: LaserLipo,
       title: "Laser-Assisted Lipo",
       description:
         "Uses laser energy to liquefy fat before removal, making it easier to remove and stimulating collagen production for tighter skin.",
       features: ["Skin Tightening Effect", "Precise Contouring"],
     },
   ];
+
+  const navigate = useNavigate();
+
+  const handleDetails = (id) => {
+    navigate(`/treatment/${id}`);
+  };
 
   return (
     <section id="minimally-invasive" className={styles.section}>
@@ -77,6 +100,7 @@ const MinimallyInvasive = () => {
               description={treatment.description}
               features={treatment.features}
               delay={index * 0.15}
+              onClick={() => handleDetails(treatment.id)}
             />
           ))}
         </div>

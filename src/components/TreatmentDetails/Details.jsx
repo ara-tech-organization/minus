@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Activity, BadgeCheck, BatteryLow, BrushIcon, CaseLowerIcon, ChevronDown, Clock, CloudLightning, CloudLightningIcon, Expand, Eye, FastForward, Flame, Flower, Flower2, FrameIcon, GlassWater, LucideCloudLightning, Shrink, SignalLow, User, WifiZero } from "lucide-react";
+import { Activity, BadgeCheck, Bandage, BatteryLow, BrushIcon, CalendarCheck, CaseLowerIcon, ChevronDown, Clock, CloudLightning, CloudLightningIcon, Droplet, Expand, Eye, FastForward, Filter, Flame, FlameIcon, Flower, Flower2, FlowerIcon, FrameIcon, GaugeCircle, GaugeCircleIcon, GlassWater, ListStart, LucideCloudLightning, Microscope, Plus, Shrink, SignalLow, Sparkles, StopCircle, TargetIcon, Ticket, TimerIcon, TimerOff, User, User2, WifiZero } from "lucide-react";
 import styles from "./Details.module.css";
 import slim from "@/assets/slim.png";
 import robo from "@/assets/robo.png";
@@ -11,6 +11,12 @@ import rf from "@/assets/rf.png";
 import CryoSculpt from "@/assets/cryo-sculpt.png";
 import lymph from "@/assets/lymph.png";
 import JawDefine from "@/assets/Jaw.png"
+import Therma from "@/assets/Therma.png";
+import SlimSmart from "@/assets/SlimSmart.png";
+import lip from "@/assets/lip.png"
+import V from "@/assets/V.png"
+import inj from "@/assets/inj.png"
+import laser from "@/assets/laser.png"
 import {
   UtensilsCrossed,
   Pill,
@@ -1047,7 +1053,7 @@ const DetailsPage = () => {
         title: "Lipo Contour",
         description:
           "Even with consistent workouts and a disciplined diet, some areas of stubborn fat refuse to budge. That’s where Lipo Contour comes in. It is a revolutionary inch-loss and body-sculpting treatment that melts fat, tones skin, and boosts metabolism effortlessly.",
-        image: JawDefine,
+        image: lip,
         buttons: [
           { text: "START YOUR JOURNEY", variant: "primary" },
           { text: "LEARN MORE", variant: "secondary" },
@@ -1143,7 +1149,715 @@ const DetailsPage = () => {
         ],
       },
     },
+    Slim: {
+      hero: {
+        title: "Slim Smart Treatment",
+        description:
+          "Recharge your body and mind with a holistic approach to slimming and detoxification.",
+        image: SlimSmart,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
 
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "By using controlled heat, this treatment warms the body from the inside out, promoting sweating, increased circulation, and fat metabolism.",
+          },
+          {
+            id: 2,
+            description:
+              "The Lymph Detoxify helps eliminate toxins and excess fluids, while thermo packs target stubborn fat deposits, leaving behind a more sculpted, toned appearance.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose Slim Smart Treatment?",
+        subtitle:
+          "JawDefine Contour uses no needles and has no discomfort. The treatment is efficient and takes less than an hour.",
+        benefits: [
+          {
+            id: 1,
+            icon: ListStart,
+            title: "Metabolism Boost",
+            description:
+              "Kickstarts your body's natural calorie-burning processes.",
+          },
+          {
+            id: 2,
+            icon: Expand,
+            title: "Targeted Contouring",
+            description:
+              "Focuses on specific areas to refine your natural shape.",
+          },
+          {
+            id: 3,
+            icon: Flame,
+            title: "Natural Detoxification",
+            description:
+              "Flushes out toxins and excess fluids for a lighter feeling.",
+          },
+          {
+            id: 4,
+            icon: Eye,
+            title: "Effortless Sculpting",
+            description:
+              "Refines silhouette without strenuous physical exertion.",
+          },
+          {
+            id: 5,
+            icon: User,
+            title: "Zero Downtime",
+            description:
+              "Return to your daily routine immediately after treatment.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How soon can results be seen?",
+            answer:
+              "Many people feel lighter and refreshed after just one session, with noticeable improvements in skin tone and body shape over multiple treatments.",
+          },
+          {
+            id: 2,
+            question: "Does the Therma Wrap feel too hot?",
+            answer:
+              "The treatment is customizable, ensuring a comfortable warmth that promotes sweating and circulation without discomfort.",
+          },
+          {
+            id: 3,
+            question: "Can this treatment help with water retention?",
+            answer:
+              "Yes! Lymph Detoxify helps reduce excess fluid buildup, making it an excellent option for those struggling with bloating and puffiness.",
+          },
+          {
+            id: 4,
+            question: "Is it safe for all skin types?",
+            answer:
+              "Absolutely! This treatment is gentle and non-invasive, making it suitable for all skin types and body concerns.",
+          },
+          {
+            id: 5,
+            question: "How often should someone get this treatment?",
+            answer:
+              "For optimal results, 1–3 sessions per week are recommended, depending on individual goals.",
+          },
+        ],
+      },
+    },
+    Therma: {
+      hero: {
+        title: "Therma Wrap",
+        description:
+          "When you feel sluggish, bloated or just in need of a reset, turn your heads to Therma Wrap, your very own portable infrared therapy solution, designed to detox, relax and recharge your body; all while you sit back and unwind.",
+        image: Therma,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "Using deep-penetrating infrared heat, the Therma Wrap works from inside out, gently heating your body to stimulate sweating, improve circulation and boost metabolism, just like a sauna but without the hassle.",
+          },
+          {
+            id: 2,
+            description:
+              "In just one session, you will feel lighter and more energised.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose Therma Wrap?",
+        subtitle:
+          "Experience the revitalizing power of portable infrared therapy in the comfort of your own space.",
+        benefits: [
+          {
+            id: 1,
+            icon: FlameIcon,
+            title: "Calorie Burn",
+            description:
+              "Mimics the effects of exercise, helping you burn calories while you relax.",
+          },
+          {
+            id: 2,
+            icon: Expand,
+            title: "Deep Detox",
+            description:
+              "Promotes deep sweating, flushing out toxins for that fresh, rejuvenated feeling.",
+          },
+          {
+            id: 3,
+            icon: FlowerIcon,
+            title: "Stress Relief",
+            description:
+              "The gentle warmth of the treatment melts away tension, leaving you feeling blissful and renewed.",
+          },
+          {
+            id: 4,
+            icon: Droplet,
+            title: "Improved Circulation",
+            description:
+              "Enhances blood flow, delivering oxygen and other nutrients for a healthier skin and improved wellness.",
+          },
+          {
+            id: 5,
+            icon: Plus,
+            title: "Portability",
+            description: "Compact, portable and ready to work.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How often should I use Therma Wrap?",
+            answer:
+              "For best results, 3–4 sessions per week can help with detox, fat burning, and overall relaxation.",
+          },
+          {
+            id: 2,
+            question: "Can I lose weight with this treatment?",
+            answer:
+              "Absolutely! Infrared heat boosts your metabolism, helping your body burn more calories similar to a light workout.",
+          },
+          {
+            id: 3,
+            question: "Is infrared therapy safe?",
+            answer:
+              "Yes! Infrared heat is a natural, non-invasive therapy that gently raises your core temperature without harmful effects.",
+          },
+          {
+            id: 4,
+            question: "Will I feel dehydrated after the session?",
+            answer:
+              "You’ll sweat, but as long as you hydrate before and after the session, you’ll feel energized and refreshed—not drained.",
+          },
+          {
+            id: 5,
+            question: "Can I use Therma Wrap anywhere?",
+            answer:
+              "Of course! Therma Wrap is portable and easy to use—whether at home, at the office, or even in a hotel room.",
+          },
+        ],
+      },
+    },
+    VFit: {
+      hero: {
+        title: "V-Fit Contour",
+        description:
+          "If you want to have a stronger, and more defined muscle without having tospend endless hours in the gym, then V-Fit Contour is your best bet. This is the ultimate effort-free body sculpting treatment.",
+        image: V,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "V-Fit Contour uses electrical impulses to mimic natural muscle contractions, just like an intense workout session, without the sweat.",
+          },
+          {
+            id: 2,
+            description:
+              "These impulses engage, tighten and strengthen your muscles while also reducing stubborn fat, giving the definition and shape you have always wanted.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose V-Fit Contour?",
+        subtitle: "Discover the effortless way to a toned, sculpted physique.",
+        benefits: [
+          {
+            id: 1,
+            icon: FlameIcon,
+            title: "Effortless Results",
+            description:
+              "V-Fit Contour activates and strengthens the muscles while you sit back and relax. No gym, no efforts, only pure results.",
+          },
+
+          {
+            id: 2,
+            icon: TimerIcon,
+            title: "Fast Acting",
+            description:
+              "The treatment activates in 30 minutes, where you can feel the burn in 30 minutes without actually lifting a finger.",
+          },
+          {
+            id: 3,
+            icon: Ticket,
+            title: "Non-Invasive",
+            description:
+              "Walk in, and tone up without the need of surgery or needles.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How soon will I see results?",
+            answer:
+              "Most people feel stronger and more toned after the first session, with visible improvements after a few treatments.",
+          },
+          {
+            id: 2,
+            question: "Can this replace my workouts?",
+            answer:
+              "While V-Fit Contour enhances muscle tone and fat reduction, it works best alongside an active lifestyle for even greater results.",
+          },
+          {
+            id: 3,
+            question: "Is the treatment painful?",
+            answer:
+              "Not at all! The sensation feels like a gentle yet effective muscle contraction, similar to an intense but refreshing workout.",
+          },
+          {
+            id: 4,
+            question: "What areas can be treated?",
+            answer:
+              "The treatment can sculpt and define multiple areas like your abs, arms, thighs, and glutes, giving you a full-body transformation!",
+          },
+          {
+            id: 5,
+            question: "Is there any downtime?",
+            answer:
+              "Nope! You can resume your daily activities immediately after the session—no soreness, no recovery time, just instant toning!",
+          },
+        ],
+      },
+    },
+    Deoxycholic: {
+      hero: {
+        title: "Deoxycholic Acid Double Chin Reduction",
+        description:
+          "Excess fat beneath the chin can be difficult to eliminate through diet and exercise alone. Deoxycholic Acid Double Chin Reduction is an injectable treatment that specifically targets submental fat (the fat under the chin).",
+        image: V,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "This FDA-approved formula contains synthetic deoxycholic acid, a naturally occurring molecule that breaks down fat cells.",
+          },
+          {
+            id: 2,
+            description:
+              "Once treated, the body naturally processes and eliminates these fat cells, resulting in a more contoured, sculpted jawline.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose This Treatment?",
+        subtitle: "Discover the effortless way to a toned, sculpted physique.",
+        benefits: [
+          {
+            id: 1,
+            icon: Bandage,
+            title: "Non-Surgical",
+            description:
+              "No incisions, no downtime, just targeted fat reduction.",
+          },
+
+          {
+            id: 2,
+            icon: StopCircle,
+            title: "Permanent Results",
+            description: "Once fat cells are destroyed, they do not return.",
+          },
+          {
+            id: 3,
+            icon: TimerIcon,
+            title: "Quick Procedure",
+            description:
+              "The procedure takes only 15-20 minutes, making it an easy addition to a busy schedule.",
+          },
+          {
+            id: 4,
+            icon: Filter,
+            title: "Quick Procedure",
+            description:
+              "Tailored to individual goals, typically requiring two to four sessions for optimal results.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "Is this treatment safe?",
+            answer:
+              "Yes, Deoxycholic Acid Double Chin Reduction is FDA-approved and has been extensively tested for safety and effectiveness.",
+          },
+          {
+            id: 2,
+            question: "How long do the results last?",
+            answer:
+              "Once fat cells are eliminated, they do not regenerate. However, maintaining a balanced diet and exercise routine helps sustain long-term results.",
+          },
+          {
+            id: 3,
+            question: "Does the procedure hurt?",
+            answer:
+              "Most patients experience mild discomfort during the injections, but a numbing agent is used to enhance comfort.",
+          },
+          {
+            id: 4,
+            question: "When will results be visible?",
+            answer:
+              "Changes start appearing a few weeks after treatment, with full results developing over a few months as the body metabolizes fat cells.",
+          },
+          {
+            id: 5,
+            question: "How many sessions are needed?",
+            answer:
+              "Depending on the amount of fat present, two to four sessions are usually recommended for noticeable contouring.",
+          },
+        ],
+      },
+    },
+    Laser: {
+      hero: {
+        title: "Laser-Assisted Liposuction",
+        description:
+          "Laser-assisted Liposuction is the perfect combination of precision fat reduction and skin tightening, helping individuals achieve a sculpted, toned physique without major surgery.",
+        image: laser,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "Laser-assisted Liposuction offers a precise, minimally invasive solution to target and eliminate fat cells while also tightening the skin. Using advanced laser energy, the treatment breaks down fat deposits in specific areas, allowing the body to naturally flush them out.",
+          },
+          {
+            id: 2,
+            description:
+              "At the same time, the laser stimulates collagen production, ensuring that the skin remains firm and toned after fat reduction.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose This Treatment?",
+        subtitle: "Discover the effortless way to a toned, sculpted physique.",
+        benefits: [
+          {
+            id: 1,
+            icon: Microscope,
+            title: "TARGETED PRECISION",
+            description: "Pinpoint accuracy.",
+          },
+          {
+            id: 2,
+            icon: Sparkles,
+            title: "ENHANCED SKIN FIRMING",
+            description: "Prevents sagging by boosting collagen.",
+          },
+          {
+            id: 3,
+            icon: GaugeCircleIcon,
+            title: "MINIMAL DOWNTIME",
+            description: "Tiny incisions, quick recovery.",
+          },
+          {
+            id: 4,
+            icon: Eye,
+            title: "FAST & VISIBLE RESULTS",
+            description: "Improvements within weeks.",
+          },
+          {
+            id: 5,
+            icon: CalendarCheck,
+            title: "LONG-LASTING OUTCOMES",
+            description: "Fat cells don’t regenerate.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How soon will results be visible?",
+            answer:
+              "Some contouring effects can be noticed immediately, but optimal results appear over a few months as the body processes and removes the broken-down fat cells.",
+          },
+          {
+            id: 2,
+            question: "Is the procedure painful?",
+            answer:
+              "Most people describe a mild warming sensation rather than pain. Local anesthesia is used to ensure a comfortable experience.",
+          },
+          {
+            id: 3,
+            question: "How long does the recovery take?",
+            answer:
+              "Recovery is quick, with most people resuming daily activities within a few days. Minor swelling or bruising may occur but fades rapidly.",
+          },
+          {
+            id: 4,
+            question: "How many sessions are required?",
+            answer:
+              "For most individuals, one session per area is enough. However, results vary depending on body type and the amount of fat being treated.",
+          },
+          {
+            id: 5,
+            question: "Are results permanent?",
+            answer:
+              "Yes! Once the fat cells are eliminated, they do not grow back. However, maintaining a healthy diet and lifestyle is essential to prevent new fat accumulation.",
+          },
+        ],
+      },
+    },
+    Bariatric: {
+      hero: {
+        title: "Bariatric Surgery",
+        description:
+          "Bariatric surgery isn’t just about losing weight; it’s about gaining a healthier, more fulfilling life. This is a life-changing procedure designed to help individuals struggling with severe obesity when traditional weight-loss methods have failed.",
+        image: laser,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "Laser-assisted Liposuction offers a precise, minimally invasive solution to target and eliminate fat cells while also tightening the skin. Using advanced laser energy, the treatment breaks down fat deposits in specific areas, allowing the body to naturally flush them out.",
+          },
+          {
+            id: 2,
+            description:
+              "At the same time, the laser stimulates collagen production, ensuring that the skin remains firm and toned after fat reduction.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose This Treatment?",
+        subtitle: "Discover the effortless way to a toned, sculpted physique.",
+        benefits: [
+          {
+            id: 1,
+            icon: Microscope,
+            title: "TARGETED PRECISION",
+            description: "Pinpoint accuracy.",
+          },
+          {
+            id: 2,
+            icon: Sparkles,
+            title: "ENHANCED SKIN FIRMING",
+            description: "Prevents sagging by boosting collagen.",
+          },
+          {
+            id: 3,
+            icon: GaugeCircleIcon,
+            title: "MINIMAL DOWNTIME",
+            description: "Tiny incisions, quick recovery.",
+          },
+          {
+            id: 4,
+            icon: Eye,
+            title: "FAST & VISIBLE RESULTS",
+            description: "Improvements within weeks.",
+          },
+          {
+            id: 5,
+            icon: CalendarCheck,
+            title: "LONG-LASTING OUTCOMES",
+            description: "Fat cells don’t regenerate.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "How soon will results be visible?",
+            answer:
+              "Some contouring effects can be noticed immediately, but optimal results appear over a few months as the body processes and removes the broken-down fat cells.",
+          },
+          {
+            id: 2,
+            question: "Is the procedure painful?",
+            answer:
+              "Most people describe a mild warming sensation rather than pain. Local anesthesia is used to ensure a comfortable experience.",
+          },
+          {
+            id: 3,
+            question: "How long does the recovery take?",
+            answer:
+              "Recovery is quick, with most people resuming daily activities within a few days. Minor swelling or bruising may occur but fades rapidly.",
+          },
+          {
+            id: 4,
+            question: "How many sessions are required?",
+            answer:
+              "For most individuals, one session per area is enough. However, results vary depending on body type and the amount of fat being treated.",
+          },
+          {
+            id: 5,
+            question: "Are results permanent?",
+            answer:
+              "Yes! Once the fat cells are eliminated, they do not grow back. However, maintaining a healthy diet and lifestyle is essential to prevent new fat accumulation.",
+          },
+        ],
+      },
+    },
+    Injection: {
+      hero: {
+        title: "Injection Lipolysis",
+        description:
+          "Some areas of fat just don’t respond to diet and exercise, no matter how much effort is put in. Injection Lipolysis is a non-surgical fat reduction treatment designed to target and dissolve stubborn fat pockets.",
+        image: inj,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "A series of precisely placed injections break down fat cells, allowing the body to naturally flush them out over time.",
+          },
+          {
+            id: 2,
+            description:
+              "The process is gradual, ensuring a smooth, natural-looking contour without the need for surgery or extended recovery periods.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose Injection Lipolysis?",
+        subtitle: "Discover the effortless way to a toned, sculpted physique.",
+        benefits: [
+          {
+            id: 1,
+            icon: Bandage,
+            title: "Non-Surgical",
+            description: "No cuts or stitches.",
+          },
+
+          {
+            id: 2,
+            icon: TargetIcon,
+            title: "Highly Targeted",
+            description: "Specific problem areas.",
+          },
+          {
+            id: 3,
+            icon: TimerIcon,
+            title: "Quick Procedure",
+            description: "The procedure takes only 15-20 minutes.",
+          },
+          {
+            id: 4,
+            icon: Filter,
+            title: "Natural Fat Removal",
+            description: "Body processes cells over time.",
+          },
+          {
+            id: 4,
+            icon: User2,
+            title: "Versatile Treatment",
+            description: "Chin, abdomen, thighs, arms.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "Is this treatment safe?",
+            answer:
+              "Yes, Deoxycholic Acid Double Chin Reduction is FDA-approved and has been extensively tested for safety and effectiveness.",
+          },
+          {
+            id: 2,
+            question: "How long do the results last?",
+            answer:
+              "Once fat cells are eliminated, they do not regenerate. However, maintaining a balanced diet and exercise routine helps sustain long-term results.",
+          },
+          {
+            id: 3,
+            question: "Does the procedure hurt?",
+            answer:
+              "Most patients experience mild discomfort during the injections, but a numbing agent is used to enhance comfort.",
+          },
+          {
+            id: 4,
+            question: "When will results be visible?",
+            answer:
+              "Changes start appearing a few weeks after treatment, with full results developing over a few months as the body metabolizes fat cells.",
+          },
+          {
+            id: 5,
+            question: "How many sessions are needed?",
+            answer:
+              "Depending on the amount of fat present, two to four sessions are usually recommended for noticeable contouring.",
+          },
+        ],
+      },
+    },
     // ===================== ADD MORE TREATMENTS HERE =====================
   };
 

@@ -5,6 +5,7 @@ import calf from "@/assets/Calf-Muscle-Reduction.png";
 import bariatric from "@/assets/Bariatric-Surgery.png";
 import abdominoplasty from "@/assets/Abdominoplasty.png";
 import totalBodyLift from "@/assets/Body-Lift-Surgery.png";
+import { useNavigate } from "react-router-dom";
 
 const ProcedureCard = ({
   image,
@@ -14,6 +15,7 @@ const ProcedureCard = ({
   delay,
   hasButton = true,
   description = null,
+  onClick
 }) => {
   return (
     <div
@@ -30,7 +32,7 @@ const ProcedureCard = ({
             <p className={styles.cardDescription}>{description}</p>
           )}
           {hasButton && (
-            <button className={styles.learnMoreBtn}>
+            <button onClick={onClick} className={styles.learnMoreBtn}>
               LEARN MORE <span className={styles.arrow}>→</span>
             </button>
           )}
@@ -53,7 +55,13 @@ const InfoCard = ({ icon: Icon, title, description, delay }) => {
   );
 };
 
+
 const SurgicalProcedures = () => {
+   const navigate = useNavigate();
+
+   const handleDetails = (id) => {
+     navigate(`/treatment/${id}`);
+   };
   return (
     <section id="surgical" className={styles.section}>
       <div className={styles.container}>
@@ -78,18 +86,23 @@ const SurgicalProcedures = () => {
               badge="LEGS"
               title="Calf Muscle Reduction"
               delay={0.1}
+              onClick={() => handleDetails("calfReduction")}
             />
+
             <ProcedureCard
               image={bariatric}
               badge="WEIGHT LOSS"
               title="Bariatric Surgery"
               delay={0.2}
+              onClick={() => handleDetails("bariatric")}
             />
+
             <ProcedureCard
               image={abdominoplasty}
               badge="TORSO"
               title="Abdominoplasty"
               delay={0.3}
+              onClick={() => handleDetails("abdominoplasty")}
             />
           </div>
 
