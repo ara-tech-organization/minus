@@ -7,7 +7,7 @@ import CompareProcedures from "../components/Treatments/CompareProcedures";
 
 
 const Treatment = () => {
-    return <div>
+    return <div id="treatments">
         <TreatmentsHero />
         <NonInvasiveTreatments />
         <MinimallyInvasive />

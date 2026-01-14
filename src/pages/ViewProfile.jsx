@@ -3,8 +3,8 @@ import DoctorBooking from "../components/viewprofile/DoctorBooking";
 
 const ViewProfile = () => {
   return (
-    <div>
-      <DoctorBooking />
+    <div id="specialists">
+      <DoctorBooking  />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import BookAppointment from "../components/Home/BookAppointment";
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <Hero />
       <MissionVision />
       <SpecialtyAreas />

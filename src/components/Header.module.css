@@ -322,7 +322,32 @@
         transform: translateX(0);
     }
 }
+.active {
+    color: #fff;
+}
 
+.navLink.active .navUnderline {
+    width: 100%;
+    opacity: 1;
+    background: #fff;
+}
+
+.navUnderline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    opacity: 0.4;
+    background: #fff;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile active style */
+.activeMobile {
+    color: #fff;
+    font-weight: 700;
+}
 /* ================================
    RESPONSIVE — 1024px to 769px
 ================================ */

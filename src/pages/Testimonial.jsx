@@ -7,7 +7,7 @@ import JourneySection from "../components/Testimonials/JourneySection";
 
 const Testimonial = () => {
   return (
-    <div>
+    <div id="testimonial">
       <ClientSuccessHero />
       <ClientJourneys />
       <ClientTestimonials />

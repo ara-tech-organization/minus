@@ -4,7 +4,7 @@ import ClinicLocations from "../components/Contact/ClinicLocations.jsx";
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <ContactSection />
       <ClinicLocations/>
     </div>

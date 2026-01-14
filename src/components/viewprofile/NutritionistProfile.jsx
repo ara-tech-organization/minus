@@ -24,7 +24,7 @@ const NutritionistLanding = () => {
   };
 
   return (
-    <div className="container">
+    <div id="specialists" className="container">
       <div className="leftSection">
         <div className="profileCard">
           <div className="profileImageWrapper">

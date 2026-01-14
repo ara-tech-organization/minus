@@ -1,29 +1,52 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useRef } from "react";
+import YouTube from "react-youtube";
 import styles from "./HeroVideo.module.css";
 
 const HeroVideo = () => {
-  const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
+  const playerRef = useRef(null);
+
+  const onReady = (event) => {
+    playerRef.current = event.target;
+    event.target.mute();
+    event.target.playVideo();
+  };
 
   const togglePlay = () => {
-    if (isPlaying) videoRef.current.pause();
-    else videoRef.current.play();
+    if (!playerRef.current) return;
+
+    if (isPlaying) {
+      playerRef.current.pauseVideo();
+    } else {
+      playerRef.current.playVideo();
+    }
+
     setIsPlaying(!isPlaying);
+  };
+
+  const videoOptions = {
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      playlist: "3vWbrrxhbV0", // required for looping
+      controls: 0,
+      modestbranding: 1,
+      showinfo: 0,
+      rel: 0,
+    },
   };
 
   return (
     <div className={styles.heroWrapper}>
       <div className={styles.heroContainer}>
-        <video
-          ref={videoRef}
+        <YouTube
+          videoId="3vWbrrxhbV0"
+          opts={videoOptions}
+          onReady={onReady}
           className={styles.videoBG}
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/src/assets/Women-back.png" type="video/mp4" />
-        </video>
+          iframeClassName={styles.videoBG}
+        />
 
         <div className={styles.overlay}></div>
 

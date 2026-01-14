@@ -6,7 +6,7 @@ import ProteinBars from "../components/Supplements/ProteinBars";
 
 const About = () => {
   return (
-    <div>
+    <div id="supplements">
       <SupplementsHero />
       <ProteinBars />
     </div>

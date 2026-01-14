@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Treatments", href: "#treatments" },
     { label: "Testimonials", href: "#testimonial" },
@@ -27,6 +27,35 @@ const Header = () => {
     { label: "Supplements", href: "#supplements" },
     { label: "Contact", href: "#contact" },
   ];
+const [activeSection, setActiveSection] = useState("home");
+
+useEffect(() => {
+  const handleScroll = () => {
+    const sections = navItems.map((item) => item.href.replace("#", ""));
+
+    let current = "home";
+
+    sections.forEach((section) => {
+      const el = document.getElementById(section);
+      if (el) {
+        const top = el.getBoundingClientRect().top;
+        const bottom = el.getBoundingClientRect().bottom;
+
+        // detect section in viewport middle
+        if (top <= 150 && bottom >= 150) {
+          current = section;
+        }
+      }
+    });
+
+    setActiveSection(current);
+
+    setIsScrolled(window.scrollY > 20);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
@@ -40,7 +69,14 @@ const Header = () => {
           <ul className={styles.navList}>
             {navItems.map((item, index) => (
               <li key={index} className={styles.navItem}>
-                <a href={item.href} className={styles.navLink}>
+                <a
+                  href={item.href}
+                  className={`${styles.navLink} ${
+                    activeSection === item.href.replace("#", "")
+                      ? styles.active
+                      : ""
+                  }`}
+                >
                   {item.label}
                   <span className={styles.navUnderline}></span>
                 </a>
@@ -93,7 +129,11 @@ const Header = () => {
               >
                 <a
                   href={item.href}
-                  className={styles.mobileNavLink}
+                  className={`${styles.mobileNavLink} ${
+                    activeSection === item.href.replace("#", "")
+                      ? styles.activeMobile
+                      : ""
+                  }`}
                   onClick={toggleMenu}
                 >
                   <span className={styles.mobileNavNumber}>0{index + 1}</span>

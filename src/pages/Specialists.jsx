@@ -7,7 +7,7 @@ import ConsultationCTA from "../components/Specialists/ConsultationCTA";
 
 const About = () => {
   return (
-    <div>
+    <div id="specialists">
       <OurSpecialists />
       <LeadSpecialist />
       <ExpertTeam />

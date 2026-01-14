@@ -12,16 +12,25 @@
     border-radius: 14px;
 }
 
+
+
 .videoBG {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* prevents accidental clicks */
+    z-index: 1;
 }
 
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
 }
 
 .centerContent {
@@ -29,11 +38,33 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 3;
     text-align: center;
-    z-index: 2;
     color: #fff;
+    width: 100%;
+    pointer-events: none;
+    /* optional */
 }
 
+.playButton {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 4;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 14px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.playButton:hover {
+    background: #fff;
+    color: #000;
+}
 .centerContent h2 {
     font-size: 2rem;
     font-weight: 300;
@@ -45,7 +76,7 @@
     font-weight: 700;
 }
 
-.playButton {
+/* .playButton {
     position: absolute;
     bottom: 30px;
     left: 30px;
@@ -61,4 +92,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
