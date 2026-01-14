@@ -5,6 +5,8 @@ import calf from "@/assets/Calf-Muscle-Reduction.png";
 import bariatric from "@/assets/Bariatric-Surgery.png";
 import abdominoplasty from "@/assets/Abdominoplasty.png";
 import totalBodyLift from "@/assets/Body-Lift-Surgery.png";
+import Lipos from "../../assets/lipos.png";
+
 import { useNavigate } from "react-router-dom";
 
 const ProcedureCard = ({
@@ -15,7 +17,7 @@ const ProcedureCard = ({
   delay,
   hasButton = true,
   description = null,
-  onClick
+  onClick,
 }) => {
   return (
     <div
@@ -42,28 +44,47 @@ const ProcedureCard = ({
   );
 };
 
-const InfoCard = ({ icon: Icon, title, description, delay, onClick }) => {
+const InfoCard = ({
+  image,
+  icon: Icon,
+  title,
+  description,
+  delay,
+  onClick,
+}) => {
   return (
-    <div className={styles.infoCard} style={{ animationDelay: `${delay}s` }}>
-      <div className={styles.infoIcon}>
-        <Icon size={40} strokeWidth={1.5} />
+    <div
+      className={styles.infoCard}
+      style={{
+        animationDelay: `${delay}s`,
+        backgroundImage: `url(${image})`,
+      }}
+    >
+      <div className={styles.overlay} />
+
+      <div className={styles.content}>
+        <div className={styles.infoIcon}>
+          <Icon size={40} strokeWidth={1.5} />
+        </div>
+
+        <h3 className={styles.infoTitle}>{title}</h3>
+        <p className={styles.infoDescription}>{description}</p>
+
+        <button onClick={onClick} className={styles.viewDetailsBtn}>
+          View Details
+        </button>
       </div>
-      <h3 className={styles.infoTitle}>{title}</h3>
-      <p className={styles.infoDescription}>{description}</p>
-      <button onClick={onClick} className={styles.viewDetailsBtn}>
-        View Details
-      </button>
     </div>
   );
 };
 
 
 const SurgicalProcedures = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-   const handleDetails = (id) => {
-     navigate(`/treatment/${id}`);
-   };
+  const handleDetails = (id) => {
+    navigate(`/treatment/${id}`);
+  };
   return (
     <section id="surgical" className={styles.section}>
       <div className={styles.container}>
@@ -118,6 +139,7 @@ const SurgicalProcedures = () => {
               onClick={() => handleDetails("body")}
             />
             <InfoCard
+              image={Lipos}
               icon={Briefcase}
               title="Liposuction"
               description="Traditional suction-assisted lipectomy for large volume fat removal."
