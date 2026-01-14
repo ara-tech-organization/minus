@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Activity, BadgeCheck, Bandage, BatteryLow, BrushIcon, CalendarCheck, CaseLowerIcon, ChevronDown, Clock, CloudLightning, CloudLightningIcon, Droplet, Expand, Eye, FastForward, Filter, Flame, FlameIcon, Flower, Flower2, FlowerIcon, FrameIcon, GaugeCircle, GaugeCircleIcon, GlassWater, ListStart, LucideCloudLightning, Microscope, Plus, Shrink, SignalLow, Sparkles, StopCircle, TargetIcon, Ticket, TimerIcon, TimerOff, User, User2, WifiZero } from "lucide-react";
+import { Activity, BadgeCheck, Bandage, BatteryLow, BrainCircuit, BrushIcon, CalendarCheck, CaseLowerIcon, ChevronDown, CircleDot, Clock, CloudLightning, CloudLightningIcon, Cog, Droplet, Expand, Eye, FastForward, Filter, Flame, FlameIcon, Flower, Flower2, FlowerIcon, FrameIcon, GaugeCircle, GaugeCircleIcon, GlassWater, Infinity, Link, ListStart, LucideCloudLightning, Microscope, Plus, Ruler, Shrink, SignalLow, Sparkles, SquareGanttChart, StopCircle, StretchHorizontal, TargetIcon, Ticket, TimerIcon, TimerOff, Triangle, User, User2, WifiZero, Zap } from "lucide-react";
 import styles from "./Details.module.css";
 import slim from "@/assets/slim.png";
 import robo from "@/assets/robo.png";
@@ -17,6 +17,9 @@ import lip from "@/assets/lip.png"
 import V from "@/assets/V.png"
 import inj from "@/assets/inj.png"
 import laser from "@/assets/laser.png"
+import Bariatric from "@/assets/Bariatric.png";
+import bodyLift from "@/assets/bodyLift.png";
+import lipos from "@/assets/lipos.png"
 import {
   UtensilsCrossed,
   Pill,
@@ -1660,7 +1663,7 @@ const DetailsPage = () => {
         title: "Bariatric Surgery",
         description:
           "Bariatric surgery isn’t just about losing weight; it’s about gaining a healthier, more fulfilling life. This is a life-changing procedure designed to help individuals struggling with severe obesity when traditional weight-loss methods have failed.",
-        image: laser,
+        image: Bariatric,
         buttons: [
           { text: "START YOUR JOURNEY", variant: "primary" },
           { text: "LEARN MORE", variant: "secondary" },
@@ -1673,49 +1676,54 @@ const DetailsPage = () => {
           {
             id: 1,
             description:
-              "Laser-assisted Liposuction offers a precise, minimally invasive solution to target and eliminate fat cells while also tightening the skin. Using advanced laser energy, the treatment breaks down fat deposits in specific areas, allowing the body to naturally flush them out.",
+              "Bariatric surgery works by modifying the digestive system through advanced clinical techniques designed for long-term physiological changes. Reducing the physical size of the stomach to limit capacity.",
           },
           {
             id: 2,
             description:
-              "At the same time, the laser stimulates collagen production, ensuring that the skin remains firm and toned after fat reduction.",
+              "Bypassing sections of the intestine to reduce calorie uptake. Reducing the production of ghrelin to suppress appetite naturally.",
           },
         ],
       },
 
       whyChoose: {
         title: "Why Choose This Treatment?",
-        subtitle: "Discover the effortless way to a toned, sculpted physique.",
+        subtitle: "Key benefits of bariatric intervention",
         benefits: [
           {
             id: 1,
-            icon: Microscope,
-            title: "TARGETED PRECISION",
-            description: "Pinpoint accuracy.",
+            icon: SquareGanttChart,
+            title: "SUSTAINABLE WEIGHT LOSS",
+            description:
+              "Helps achieve and maintain a healthier weight over the long term.",
           },
           {
             id: 2,
-            icon: Sparkles,
-            title: "ENHANCED SKIN FIRMING",
-            description: "Prevents sagging by boosting collagen.",
+            icon: ShieldCheck,
+            title: "HEALTH RISK REDUCTION",
+            description:
+              "Reduces the risk of diabetes, high blood pressure, sleep apnea, and joint pain.",
           },
           {
             id: 3,
-            icon: GaugeCircleIcon,
-            title: "MINIMAL DOWNTIME",
-            description: "Tiny incisions, quick recovery.",
+            icon: BrainCircuit,
+            title: "HORMONAL BALANCE",
+            description:
+              "Encourages hormonal changes that support weight loss and metabolic health.",
           },
           {
             id: 4,
-            icon: Eye,
-            title: "FAST & VISIBLE RESULTS",
-            description: "Improvements within weeks.",
+            icon: Zap,
+            title: "ENHANCED VITALITY",
+            description:
+              "Increases mobility, energy levels, and overall physical well-being.",
           },
           {
             id: 5,
-            icon: CalendarCheck,
-            title: "LONG-LASTING OUTCOMES",
-            description: "Fat cells don’t regenerate.",
+            icon: GaugeCircle,
+            title: "OPTIMIZED RECOVERY",
+            description:
+              "Quicker recovery with less downtime using minimally invasive techniques.",
           },
         ],
       },
@@ -1725,33 +1733,28 @@ const DetailsPage = () => {
         questions: [
           {
             id: 1,
-            question: "How soon will results be visible?",
+            question: "How much weight can I expect to lose?",
             answer:
-              "Some contouring effects can be noticed immediately, but optimal results appear over a few months as the body processes and removes the broken-down fat cells.",
+              "On average, people lose about 50–80% of excess weight within the first 12–18 months, depending on the procedure and lifestyle changes.",
           },
           {
             id: 2,
-            question: "Is the procedure painful?",
+            question: "Will I need to follow a strict diet after surgery?",
             answer:
-              "Most people describe a mild warming sensation rather than pain. Local anesthesia is used to ensure a comfortable experience.",
+              "Yes, a structured diet is essential for healing and long-term success, gradually transitioning from liquids to solid foods.",
           },
           {
             id: 3,
-            question: "How long does the recovery take?",
+            question:
+              "Can this surgery help with conditions like PCOS or infertility?",
             answer:
-              "Recovery is quick, with most people resuming daily activities within a few days. Minor swelling or bruising may occur but fades rapidly.",
+              "Yes! Bariatric surgery can regulate hormones, improve menstrual cycles, and boost fertility in women with obesity-related reproductive issues.",
           },
           {
             id: 4,
-            question: "How many sessions are required?",
+            question: "How soon can I return to normal activities?",
             answer:
-              "For most individuals, one session per area is enough. However, results vary depending on body type and the amount of fat being treated.",
-          },
-          {
-            id: 5,
-            question: "Are results permanent?",
-            answer:
-              "Yes! Once the fat cells are eliminated, they do not grow back. However, maintaining a healthy diet and lifestyle is essential to prevent new fat accumulation.",
+              "Most people resume light activities within a week and return to regular routines in 4–6 weeks, depending on individual recovery.",
           },
         ],
       },
@@ -1854,6 +1857,213 @@ const DetailsPage = () => {
             question: "How many sessions are needed?",
             answer:
               "Depending on the amount of fat present, two to four sessions are usually recommended for noticeable contouring.",
+          },
+        ],
+      },
+    },
+    body: {
+      hero: {
+        title: "BODY LIFT SURGERY",
+        description:
+          "Body Lift Surgery is a comprehensive contouring procedure designed to tighten and reshape areas affected by loose skin, excess fat, and tissue laxity. Whether due to significant weight loss, aging, or pregnancy, this procedure restores firmness and definition to multiple areas of the body.",
+        image: bodyLift,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "Depending on individual needs, the treatment can focus on the lower body, upper body, or a full-body transformation. Focuses on the abdomen, buttocks, hips, and outer thighs for a cohesive lower contour.",
+          },
+          {
+            id: 2,
+            description:
+              "Targets the breasts, back, and arms to eliminate sagging tissue and restore firm lines. A total transformation addressing multiple regions simultaneously for maximum results.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose This Treatment?",
+        subtitle: "Key benefits of bariatric intervention",
+        benefits: [
+          {
+            id: 1,
+            icon: StretchHorizontal,
+            title: "SKIN TIGHTENING",
+            description:
+              "Removes excess, sagging skin for a firmer, tighter look across targeted areas.",
+          },
+          {
+            id: 2,
+            icon: Activity,
+            title: "REDEFINED SILHOUETTE",
+            description:
+              "Redefines body shape, creating smoother, youthful proportions and improved balance.",
+          },
+          {
+            id: 3,
+            icon: Smile,
+            title: "ENHANCED COMFORT",
+            description:
+              "No more chafing or discomfort caused by excess skin during physical activities.",
+          },
+          {
+            id: 4,
+            icon: Cog,
+
+            title: "PERMANENT IMPROVEMENT",
+            description:
+              "Provides permanent improvement when paired with a healthy, balanced lifestyle.",
+          },
+          {
+            id: 5,
+            icon: Link,
+            title: "CUSTOMIZED APPROACH",
+            description:
+              "Tailored to individual needs, addressing specific concerns unique to your body.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "Who is a good candidate for body lift surgery?",
+            answer:
+              "Ideal candidates are individuals who have lost a significant amount of weight, experienced skin laxity due to aging, or struggle with excess, sagging skin that does not respond to exercise.",
+          },
+          {
+            id: 2,
+            question: "How long is the recovery period?",
+            answer:
+              "Recovery varies based on the extent of the procedure, but most people resume light activities within 2–3 weeks and return to normal routines in a few months with proper post-surgical care.",
+          },
+          {
+            id: 3,
+            question: "Is this a weight-loss procedure?",
+            answer:
+              "No, a body lift is not a weight-loss solution. It is a body contouring procedure designed to remove excess skin and minor fat deposits, enhancing definition and shape.",
+          },
+          {
+            id: 4,
+            question: "How long do the results last?",
+            answer:
+              "Results are long-lasting, especially when maintained with a stable weight, healthy diet, and regular exercise.",
+          },
+        ],
+      },
+    },
+    liposuction: {
+      hero: {
+        title: "LIPOSUCTION",
+        description:
+          "Liposuction is a surgical fat removal procedure designed to eliminate stubborn fat deposits that do not respond to diet and exercise. Using a thin, specialized tube called a cannula, excess fat is gently suctioned out, reshaping and refining body contours. The procedure targets specific problem areas, leaving behind a more sculpted, proportionate physique with lasting results.",
+        image: lipos,
+        buttons: [
+          { text: "START YOUR JOURNEY", variant: "primary" },
+          { text: "LEARN MORE", variant: "secondary" },
+        ],
+      },
+
+      howItWorks: {
+        title: "HOW DOES IT WORK?",
+        sections: [
+          {
+            id: 1,
+            description:
+              "Liposuction uses a thin cannula to break down and gently suction out unwanted fat from targeted areas such as the abdomen, thighs, hips, arms, and chin. This removes stubborn fat that doesn’t respond to diet or exercise.",
+          },
+          {
+            id: 2,
+            description:
+              "Once the fat is removed, the area is sculpted for smoother body contours and improved definition. Results continue to refine as swelling subsides over the following weeks.",
+          },
+        ],
+      },
+
+      whyChoose: {
+        title: "Why Choose Liposuction?",
+        subtitle: "Key benefits of bariatric intervention",
+        benefits: [
+          {
+            id: 1,
+            icon: CircleDot, // Targeted Fat Removal
+            title: "TARGETED FAT REMOVAL",
+            description:
+              "Removes fat from resistant areas that traditional methods can't reach.",
+          },
+          {
+            id: 2,
+            icon: Ruler, // Precision Contouring
+            title: "PRECISION CONTOURING",
+            description:
+              "Enhances natural curves for a balanced and refined aesthetic look.",
+          },
+          {
+            id: 3,
+            icon: Triangle, // Versatile Treatment
+            title: "VERSATILE TREATMENT",
+            description:
+              "Effective for abdomen, thighs, arms, back, and jawline areas.",
+          },
+          {
+            id: 4,
+            icon: Infinity, // Permanent Outcomes
+            title: "PERMANENT OUTCOMES",
+            description:
+              "Extracted fat cells do not regenerate, ensuring lasting profile improvements.",
+          },
+          {
+            id: 5,
+            icon: Zap,
+            title: "EFFICIENT RECOVERY",
+            description:
+              "Modern techniques allow patients to resume activities in a short period.",
+          },
+        ],
+      },
+
+      faq: {
+        title: "FREQ. ASKED QUESTIONS",
+        questions: [
+          {
+            id: 1,
+            question: "Is liposuction a weight-loss procedure?",
+            answer:
+              "No, liposuction is designed for body contouring, not significant weight loss. It is best suited for those close to their ideal weight but struggling with stubborn fat areas.",
+          },
+          {
+            id: 2,
+            question: "How long does it take to see results?",
+            answer:
+              "Initial results are noticeable within a few weeks, with final results becoming more apparent as swelling subsides over a few months.",
+          },
+          {
+            id: 3,
+            question: "Will the fat return after liposuction?",
+            answer:
+              "Once removed, fat cells do not grow back. However, maintaining a healthy lifestyle is crucial to prevent remaining fat cells from expanding.",
+          },
+          {
+            id: 4,
+            question: "Is the procedure painful?",
+            answer:
+              "Liposuction is performed under local or general anesthesia to ensure that there is no discomfort throughout the procedure.",
+          },
+          {
+            id: 5,
+            question: "Can multiple areas be treated at once?",
+            answer:
+              "Yes, multiple areas can be addressed in one session, depending on the individual’s goals and the amount of fat being removed.",
           },
         ],
       },
