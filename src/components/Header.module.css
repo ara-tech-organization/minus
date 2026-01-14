@@ -225,7 +225,7 @@
 /* Mobile Menu */
 .mobileMenu {
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -246,6 +246,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #000;
 }
 
 .mobileNavList {
@@ -322,18 +323,61 @@
     }
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .container {
-        padding: 1.5rem 2rem;
-    }
+/* ================================
+   RESPONSIVE — 1024px to 769px
+================================ */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
 
-    .scrolled .container {
+    /* Header container spacing */
+    .container {
         padding: 1rem 2rem;
     }
 
+    /* Logo scaling */
+    .logoImage {
+        width: 110px;
+    }
+
+    /* Navigation list spacing */
     .navList {
         gap: 2rem;
+    }
+
+    /* Navigation link styling */
+    .navLink {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+    }
+
+    /* CTA button shrink */
+    .ctaButton {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.85rem;
+    }
+
+    /* Reduce underline thickness for smaller screens */
+    .navUnderline {
+        height: 1.5px;
+    }
+
+    /* Hamburger appears earlier */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide desktop nav at this breakpoint */
+    .nav {
+        display: none;
+    }
+
+    /* Mobile menu adjustment */
+    .mobileNavLink {
+        font-size: 2rem;
+        padding: 0.8rem 0;
+    }
+
+    .mobileNav {
+        padding-top: 5rem;
     }
 }
 
@@ -358,8 +402,9 @@
         padding: 1rem 1.5rem;
     }
 
-    .logo {
-        font-size: 1.125rem;
+    .logoImage{
+       width: 100px;
+       height: 100px;
     }
 
     .logoIcon {
