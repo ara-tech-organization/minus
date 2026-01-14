@@ -228,16 +228,22 @@
 }
 
 .infoCard {
-    background: #242424;
+    /* background: #242424; */
     border-radius: 16px;
     padding: 3rem 2rem;
     display: flex;
+     background-size: cover;
+      background-position: center;
+       position: relative;
+       border-radius: 24px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 360px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
+    overflow: hidden;
     animation: fadeInUp 0.8s ease-out forwards;
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -261,11 +267,28 @@
     margin-bottom: 2rem;
     transition: all 0.3s ease;
 }
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+}
 
+.infoIcon {
+  margin-bottom: 12px;
+}
 .infoIcon svg {
     color: #fff;
 }
-
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.10)
+  );
+  z-index: 1;
+}
 .infoCard:hover .infoIcon {
     background: rgba(255, 255, 255, 0.12);
     transform: scale(1.05);

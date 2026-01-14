@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "./MinimallyInvasive.module.css";
-import minimalInvasive1 from "@/assets/mini-invasive-1.png"
-import minimalInvasive2 from "@/assets/mini-invasive-2.png"
-import minimalInvasive3 from "@/assets/mini-invasive-3.png"
+
 import { useNavigate } from "react-router-dom";
-import DeoxycholicAcid from "@/assets/DeoxycholicAcid.png";
-import InjectionLipolysis from "@/assets/InjectionLipolysis.png";
-import LaserLipo from "@/assets/LaserLipo.png";
+import DeoxycholicAcid from "@/assets//mini-invasive-1.png";
+import InjectionLipolysis from "@/assets/mini-invasive-2.png";
+import LaserLipo from "@/assets/mini-invasive-3.png";
 
 const TreatmentCard = ({
   image,
