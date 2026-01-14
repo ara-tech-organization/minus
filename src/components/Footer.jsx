@@ -3,22 +3,22 @@ import styles from "./Footer.module.css";
 import logo from "@/assets/logo.webp"
 const Footer = () => {
   const quicklinks = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Treatments", href: "#" },
-    { label: "Supplements", href: "#" },
-    { label: "Contact", href: "#" },
-    { label: "Blogs", href: "#" },
-    { label: "Web Story", href: "#" },
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Treatments", href: "#treatments" },
+    { label: "Supplements", href: "#supplements" },
+    { label: "Contact", href: "#contact" },
+    { label: "Specialist", href: "#specialists" },
+    { label: "Testimonials", href: "#testimonial" },
   ];
 
   const services = [
-    { label: "CryoSculpt", href: "#" },
-    { label: "AI Robotic Sonic Slim", href: "#" },
-    { label: "Laser-Assisted Liposuction", href: "#" },
-    { label: "Injection Lipolysis", href: "#" },
-    { label: "Body Lift Surgery", href: "#" },
-    { label: "Bariatric Surgery", href: "#" },
+    { label: "CryoSculpt", href: "#treatment/CryoSculpt" },
+    { label: "AI Robotic Sonic Slim", href: "#treatment/robotic" },
+    { label: "Laser-Assisted Liposuction", href: "#treatment/Laser" },
+    { label: "Injection Lipolysis", href: "#treatment/Injection" },
+    { label: "Body Lift Surgery", href: "#treatment/body" },
+    { label: "Bariatric Surgery", href: "#treatment/Bariatric" },
   ];
 
   return (
@@ -101,8 +101,9 @@ const Footer = () => {
             <h3 className={styles.columnTitle}>Contact</h3>
             <address className={styles.address}>
               <p className={styles.addressText}>
-                Amarphara Ground Floor, New No 51, Old No 19, A Block, Uthmar
-                Gandhi Salai, Nungambakkam, Chennai, Tamil Nadu- 600 034
+                Ground Floor,No.30-30A, KG TOWERS, Velachery Bypass Rd, Devi
+                Karumariamman Nagar Extension, Velachery, Chennai, Tamil Nadu
+                600042
               </p>
               <p className={styles.addressText}>
                 Landmark: Before TAJ Coromandel
@@ -112,7 +113,7 @@ const Footer = () => {
               </a>
             </address>
             <div className={styles.contactInfo}>
-              <a href="tel:+919410434567" className={styles.contactLink}>
+              <a href="tel:+919843734567" className={styles.contactLink}>
                 <svg
                   width="16"
                   height="16"
@@ -123,7 +124,7 @@ const Footer = () => {
                 >
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
-                +91 94104 34567
+                +91 9843734567
               </a>
               <a
                 href="mailto:info@minusclinic.com"
