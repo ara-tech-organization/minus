@@ -27,35 +27,35 @@ const Header = () => {
     { label: "Supplements", href: "#supplements" },
     { label: "Contact", href: "#contact" },
   ];
-const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("home");
 
-useEffect(() => {
-  const handleScroll = () => {
-    const sections = navItems.map((item) => item.href.replace("#", ""));
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map((item) => item.href.replace("#", ""));
 
-    let current = "home";
+      let current = "home";
 
-    sections.forEach((section) => {
-      const el = document.getElementById(section);
-      if (el) {
-        const top = el.getBoundingClientRect().top;
-        const bottom = el.getBoundingClientRect().bottom;
+      sections.forEach((section) => {
+        const el = document.getElementById(section);
+        if (el) {
+          const top = el.getBoundingClientRect().top;
+          const bottom = el.getBoundingClientRect().bottom;
 
-        // detect section in viewport middle
-        if (top <= 150 && bottom >= 150) {
-          current = section;
+          // detect section in viewport middle
+          if (top <= 150 && bottom >= 150) {
+            current = section;
+          }
         }
-      }
-    });
+      });
 
-    setActiveSection(current);
+      setActiveSection(current);
 
-    setIsScrolled(window.scrollY > 20);
-  };
+      setIsScrolled(window.scrollY > 20);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
@@ -86,7 +86,10 @@ useEffect(() => {
         </nav>
 
         {/* CTA Button */}
-        <button className={styles.ctaButton}>
+        <button
+          className={styles.ctaButton}
+          onClick={() => (window.location.href = "/#contact")}
+        >
           <span>Get Started</span>
           <svg
             className={styles.ctaArrow}
@@ -142,7 +145,12 @@ useEffect(() => {
               </li>
             ))}
           </ul>
-          <button className={styles.mobileCtaButton} onClick={toggleMenu}>
+          <button
+            className={styles.mobileCtaButton}
+            onClick={() => {
+              window.location.href = "/#contact";
+            }}
+          >
             Get Started
           </button>
         </nav>

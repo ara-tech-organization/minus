@@ -57,7 +57,7 @@ const ClientJourneys = () => {
             life-changing results.
           </p>
         </div>
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           {videos.map((video, index) => (
             <VideoCard
               key={index}
@@ -69,7 +69,7 @@ const ClientJourneys = () => {
               delay={index * 0.15}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
