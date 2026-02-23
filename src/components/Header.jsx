@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 import logo from "@/assets/logo.webp";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,67 +21,41 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Treatments", href: "#treatments" },
-    { label: "Testimonials", href: "#testimonial" },
-    { label: "Specialists", href: "#specialists" },
-    { label: "Supplements", href: "#supplements" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Treatments", href: "/treatments" },
+    { label: "Testimonials", href: "/testimonial" },
+    { label: "Specialists", href: "/specialists" },
+    { label: "Supplements", href: "/supplements" },
+    { label: "Contact", href: "/contact" },
   ];
-  const [activeSection, setActiveSection] = useState("home");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map((item) => item.href.replace("#", ""));
-
-      let current = "home";
-
-      sections.forEach((section) => {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.getBoundingClientRect().top;
-          const bottom = el.getBoundingClientRect().bottom;
-
-          // detect section in viewport middle
-          if (top <= 150 && bottom >= 150) {
-            current = section;
-          }
-        }
-      });
-
-      setActiveSection(current);
-
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const isActive = (href) => {
+    if (href === "/") return location.pathname === "/" || location.pathname === "/home";
+    return location.pathname === href;
+  };
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        <a href="#home" className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <img src={logo} alt="Studio Logo" className={styles.logoImage} />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             {navItems.map((item, index) => (
               <li key={index} className={styles.navItem}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className={`${styles.navLink} ${
-                    activeSection === item.href.replace("#", "")
-                      ? styles.active
-                      : ""
+                    isActive(item.href) ? styles.active : ""
                   }`}
                 >
                   {item.label}
                   <span className={styles.navUnderline}></span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -88,7 +64,7 @@ const Header = () => {
         {/* CTA Button */}
         <button
           className={styles.ctaButton}
-          onClick={() => (window.location.href = "/#contact")}
+          onClick={() => (window.location.href = "/contact")}
         >
           <span>Get Started</span>
           <svg
@@ -130,25 +106,23 @@ const Header = () => {
                 className={styles.mobileNavItem}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className={`${styles.mobileNavLink} ${
-                    activeSection === item.href.replace("#", "")
-                      ? styles.activeMobile
-                      : ""
+                    isActive(item.href) ? styles.activeMobile : ""
                   }`}
                   onClick={toggleMenu}
                 >
                   <span className={styles.mobileNavNumber}>0{index + 1}</span>
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
           <button
             className={styles.mobileCtaButton}
             onClick={() => {
-              window.location.href = "/#contact";
+              window.location.href = "/contact";
             }}
           >
             Get Started

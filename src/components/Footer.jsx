@@ -1,24 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import logo from "@/assets/logo.webp"
 const Footer = () => {
   const quicklinks = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Treatments", href: "#treatments" },
-    { label: "Supplements", href: "#supplements" },
-    { label: "Contact", href: "#contact" },
-    { label: "Specialist", href: "#specialists" },
-    { label: "Testimonials", href: "#testimonial" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Treatments", href: "/treatments" },
+    { label: "Supplements", href: "/supplements" },
+    { label: "Contact", href: "/contact" },
+    { label: "Specialist", href: "/specialists" },
+    { label: "Testimonials", href: "/testimonial" },
   ];
 
   const services = [
-    { label: "CryoSculpt", href: "#treatment/CryoSculpt" },
-    { label: "AI Robotic Sonic Slim", href: "#treatment/robotic" },
-    { label: "Laser-Assisted Liposuction", href: "#treatment/Laser" },
-    { label: "Injection Lipolysis", href: "#treatment/Injection" },
-    { label: "Body Lift Surgery", href: "#treatment/body" },
-    { label: "Bariatric Surgery", href: "#treatment/Bariatric" },
+    { label: "CryoSculpt", href: "/treatment/CryoSculpt" },
+    { label: "AI Robotic Sonic Slim", href: "/treatment/robotic" },
+    { label: "Laser-Assisted Liposuction", href: "/treatment/Laser" },
+    { label: "Injection Lipolysis", href: "/treatment/Injection" },
+    { label: "Body Lift Surgery", href: "/treatment/body" },
+    { label: "Bariatric Surgery", href: "/treatment/Bariatric" },
   ];
 
   return (
@@ -74,9 +75,9 @@ const Footer = () => {
             <ul className={styles.linksList}>
               {quicklinks.map((link, index) => (
                 <li key={index} className={styles.linkItem}>
-                  <a href={link.href} className={styles.link}>
+                  <Link to={link.href} className={styles.link}>
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -88,9 +89,9 @@ const Footer = () => {
             <ul className={styles.linksList}>
               {services.map((service, index) => (
                 <li key={index} className={styles.linkItem}>
-                  <a href={service.href} className={styles.link}>
+                  <Link to={service.href} className={styles.link}>
                     {service.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
