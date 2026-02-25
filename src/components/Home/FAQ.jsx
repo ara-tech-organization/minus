@@ -32,8 +32,8 @@ const FAQ = () => {
     },
   ];
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? -1 : index);
+  const openFAQ = (index) => {
+    setOpenIndex(index);
   };
 
   return (
@@ -47,10 +47,10 @@ const FAQ = () => {
             className={`${styles.faqItem} ${
               openIndex === index ? styles.faqItemOpen : ""
             }`}
+            onMouseEnter={() => openFAQ(index)}
           >
             <button
               className={styles.faqQuestion}
-              onClick={() => toggleFAQ(index)}
               aria-expanded={openIndex === index}
             >
               <span>{faq.question}</span>

@@ -38,16 +38,16 @@ const Home = () => {
       <div data-aos="fade-up">
         <BookAppointment />
       </div>
-      <div data-aos="fade-left">
+      <div data-aos="fade-up">
         <AreasOfExpertise />
       </div>
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         <BodyTreatment />
       </div>
       <div data-aos="fade-up">
         <HolisticApproach />
       </div>
-      <div data-aos="zoom-in">
+      <div data-aos="fade-down">
         <PatientTestimonials />
       </div>
       <div data-aos="fade-up">

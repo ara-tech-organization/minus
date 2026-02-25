@@ -2,6 +2,7 @@
     padding: 5rem 2rem;
     background: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    scroll-margin-top: 100px;
 }
 
 .container {

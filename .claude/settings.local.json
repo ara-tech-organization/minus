@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rn \"commented-out.*onClick\\\\|//.*onClick\\\\|/\\\\*.*onClick\" /c/Users/samyu/ARA/minus/src --include=\"*.jsx\" --include=\"*.js\")"
+    ]
+  }
+}

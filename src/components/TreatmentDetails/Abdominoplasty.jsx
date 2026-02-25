@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Abdominoplasty.module.css";
 import abdomino from "@/assets/abdomino.png";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 const Abdominoplasty = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -54,8 +55,17 @@ const Abdominoplasty = () => {
   },
 ];
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Treatments", href: "/treatments" },
+    { label: "Abdominoplasty", href: "#" },
+  ];
+
   return (
     <div className={styles.container}>
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={breadcrumbItems} />
+
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -75,8 +85,8 @@ const Abdominoplasty = () => {
               creates a firmer, flatter midsection and a more toned appearance.
             </p>
             <div className={styles.heroButtons}>
-              <button className={styles.btnPrimary}>START YOUR JOURNEY</button>
-              <button className={styles.btnSecondary}>LEARN MORE</button>
+              <button className={styles.btnPrimary} onClick={() => { window.location.href = "/book"; }}>START YOUR JOURNEY</button>
+              <button className={styles.btnSecondary} onClick={() => { window.location.href = "/treatments"; }}>LEARN MORE</button>
             </div>
           </div>
         </div>

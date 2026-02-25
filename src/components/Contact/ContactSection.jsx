@@ -41,7 +41,7 @@ const ContactSection = () => {
             questions about our treatments, our dedicated team is here to guide
             you on your wellness journey.
           </p>
-          <button className={styles.callButton}>
+          <button className={styles.callButton} onClick={() => { window.location.href = "tel:+919440334567"; }}>
             <Phone className={styles.phoneIcon} />
             <div className={styles.callContent}>
               <span className={styles.callLabel}>GIVE US A CALL</span>

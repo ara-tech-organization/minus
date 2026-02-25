@@ -195,14 +195,14 @@ const AreasOfExpertise = () => {
                   ))}
                 </ul>
 
-                <button
+                {/* <button
                   className={styles.ctaButton}
                   onClick={() => {
                     window.location.href = "/#treatments";
                   }}
                 >
                   Explore Procedure
-                </button>
+                </button> */}
               </div>
 
               <div className={styles.imageContent}>

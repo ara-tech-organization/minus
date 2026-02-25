@@ -182,13 +182,30 @@
 .copyright {
   padding-top: 32px;
   border-top: 1px solid #1a1a1a;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .copyright p {
   font-size: 12px;
   color: #666666;
   margin: 0;
+}
+
+.craftedLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.craftedLink:hover {
+  color: #b0b0b0;
+  border-bottom-color: #b0b0b0;
 }
 
 @media (max-width: 1200px) {
@@ -246,5 +263,7 @@
 
   .copyright {
     padding-top: 24px;
+    flex-direction: column;
+    text-align: center;
   }
 }

@@ -79,9 +79,9 @@ const CompareProcedures = () => {
             </tbody>
           </table>
           <div className={styles.buttonRow}>
-            <button className={styles.bookBtn}>Book Consultation</button>
-            <button className={styles.bookBtn}>Book Consultation</button>
-            <button className={styles.bookBtn}>Book Consultation</button>
+            <button className={styles.bookBtn} onClick={() => { window.location.href = "/book"; }}>Book Consultation</button>
+            <button className={styles.bookBtn} onClick={() => { window.location.href = "/book"; }}>Book Consultation</button>
+            <button className={styles.bookBtn} onClick={() => { window.location.href = "/book"; }}>Book Consultation</button>
           </div>
         </div>
       </div>

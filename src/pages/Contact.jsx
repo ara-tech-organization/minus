@@ -19,7 +19,7 @@ const Contact = () => {
       <div data-aos="fade-up">
         <ContactSection />
       </div>
-      <div data-aos="fade-right" data-aos-delay="200">
+      <div data-aos="fade-up" data-aos-delay="200">
         <ClinicLocations />
       </div>
     </div>

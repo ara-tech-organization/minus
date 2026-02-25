@@ -4,6 +4,7 @@ import icon1 from "../../assets/kicon1.png";
 import icon2 from "../../assets/kicon2.png";
 import icon3 from "../../assets/kicon3.png";
 import icon4 from "../../assets/kicon4.png";
+import doctorImg from "../../assets/doctor-raj.png";
 
 const DoctorBooking = () => {
   const getTodayDate = () => {
@@ -81,7 +82,7 @@ const DoctorBooking = () => {
           {/* Profile Header */}
           <div className={styles.profileHeader}>
             <div className={styles.profileImage}>
-              <img src="src/assets/doctor-raj.png" alt="Dr. Rai Palaniappan" />
+              <img src={doctorImg} alt="Dr. Rai Palaniappan" />
             </div>
             <div className={styles.profileInfo}>
               <p className={styles.category}> Accepting New Patients</p>
@@ -105,10 +106,17 @@ const DoctorBooking = () => {
                 </div>
                 <div className={styles.contactItem}>
                   <span className={styles.icon}>✉️</span>
-                  <span>info@minusclinic.com</span>
+                  <span>velachery@minusclinic.com</span>
                 </div>
               </div>
-              <button className={styles.consultBtn}>BOOK A CONSULTATION</button>
+              <button
+                className={styles.consultBtn}
+                onClick={() => {
+                  window.location.href = "/book";
+                }}
+              >
+                BOOK A CONSULTATION
+              </button>
             </div>
           </div>
 
@@ -380,7 +388,14 @@ const DoctorBooking = () => {
               <span>OR</span>
             </div>
             <p className={styles.bookingSubtext}>Pefer To Call</p>
-            <button className={styles.callBtn}>+91 94104 34567</button>
+            <button
+              className={styles.callBtn}
+              onClick={() => {
+                window.location.href = "tel:+919410434567";
+              }}
+            >
+              +91 94104 34567
+            </button>
           </div>
 
           {/* Quote Card */}

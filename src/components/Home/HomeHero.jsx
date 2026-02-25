@@ -37,7 +37,7 @@ const BodyContouringHero = () => {
             <button
               className={styles["cta-button"]}
               onClick={() => {
-                window.location.href = "/#contact";
+                window.location.href = "/book";
               }}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -48,10 +48,10 @@ const BodyContouringHero = () => {
             <button
               className={styles["services-button"]}
               onClick={() => {
-                window.location.href = "/#treatments";
+                window.location.href = "/treatments";
               }}
             >
-              Our Services
+              Our Treatments
               <svg
                 className={styles["arrow-icon"]}
                 width="16"

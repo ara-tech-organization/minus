@@ -151,6 +151,73 @@
     transform: translateY(-1px);
 }
 
+/* Video Modal */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modalContent {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 12px;
+    overflow: visible;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: scaleIn 0.3s ease-out;
+}
+
+.closeButton {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #fff;
+    border: none;
+    color: #000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton:hover {
+    background: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 50%; /* Reduced height - approximately 2:1 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -159,6 +226,18 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -305,5 +384,22 @@
     .secondaryBtn {
         padding: 0.8rem 1.25rem;
         font-size: 0.875rem;
+    }
+
+    .closeButton {
+        top: -12px;
+        right: -12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .modalContent {
+        border-radius: 8px;
+        max-width: 100%;
+    }
+
+    .videoWrapper {
+        padding-bottom: 56.25%; /* Back to 16:9 on mobile */
+        border-radius: 8px;
     }
 }

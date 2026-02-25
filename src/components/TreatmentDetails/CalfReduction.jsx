@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./CalfReduction.module.css";
 import { Compass, Droplet, Scale } from "lucide-react";
-import calf from "@/assets/calf.png"
+import calf from "@/assets/calf.png";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 const CalfReduction = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -22,8 +23,17 @@ const CalfReduction = () => {
     console.log("Form submitted:", formData);
   };
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Treatments", href: "/treatments" },
+    { label: "Calf Muscle Reduction", href: "#" },
+  ];
+
   return (
     <div className={styles.container}>
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={breadcrumbItems} />
+
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -49,8 +59,8 @@ const CalfReduction = () => {
               <span className={styles.metaItem}>WEEKLY ONCE</span>
             </div>
             <div className={styles.heroButtons}>
-              <button className={styles.btnPrimary}>START YOUR JOURNEY</button>
-              <button className={styles.btnSecondary}>LEARN MORE</button>
+              <button className={styles.btnPrimary} onClick={() => { window.location.href = "/book"; }}>START YOUR JOURNEY</button>
+              <button className={styles.btnSecondary} onClick={() => { window.location.href = "/treatments"; }}>LEARN MORE</button>
             </div>
           </div>
         </div>

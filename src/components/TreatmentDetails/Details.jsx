@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Activity, BadgeCheck, Bandage, BatteryLow, BrainCircuit, BrushIcon, CalendarCheck, CaseLowerIcon, ChevronDown, CircleDot, Clock, CloudLightning, CloudLightningIcon, Cog, Droplet, Expand, Eye, FastForward, Filter, Flame, FlameIcon, Flower, Flower2, FlowerIcon, FrameIcon, GaugeCircle, GaugeCircleIcon, GlassWater, Infinity, Link, ListStart, LucideCloudLightning, Microscope, Plus, Ruler, Shrink, SignalLow, Sparkles, SquareGanttChart, StopCircle, StretchHorizontal, TargetIcon, Ticket, TimerIcon, TimerOff, Triangle, User, User2, WifiZero, Zap } from "lucide-react";
 import styles from "./Details.module.css";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import slim from "@/assets/slim.png";
 import robo from "@/assets/robo.png";
 import cyroflash from "@/assets/cryo-flash.png";
@@ -34,6 +35,30 @@ import {
 
 const DetailsPage = () => {
   const { id } = useParams();
+
+  // ====================== TREATMENT NAMES FOR BREADCRUMBS ======================
+  const treatmentNames = {
+    slimtrim: "SlimTrim Capsule",
+    CryoFlash: "CryoFlash",
+    CryoMax: "CryoMax Sculpting",
+    "CryoSphere360°": "CryoSphere 360°",
+    CryoSculpt: "CryoSculpt",
+    robotic: "AI Robotic Sonic Slim",
+    rf: "RF Skin Tightening",
+    LymphDetoxify: "Lymph Detoxify",
+    Silhouette: "Silhouette Refinement",
+    JawDefine: "JawDefine Contour",
+    Lipo: "Lipo Contour",
+    Slim: "Slim Smart Treatment",
+    Therma: "Therma Wrap",
+    VFit: "V-Fit Contour",
+    Deoxycholic: "Deoxycholic Acid Double Chin Reduction",
+    Laser: "Laser-Assisted Liposuction",
+    Bariatric: "Bariatric Surgery",
+    Injection: "Injection Lipolysis",
+    body: "Body Lift Surgery",
+    liposuction: "Liposuction",
+  };
 
   // ====================== ALL TREATMENT DATA HERE ======================
   const treatments = {
@@ -2086,9 +2111,19 @@ const DetailsPage = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
+  // ====================== BREADCRUMBS DATA ======================
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Treatments", href: "/treatments" },
+    { label: treatmentNames[id] || "Treatment Details", href: "#" },
+  ];
+
   // ====================== TEMPLATE RENDER ======================
   return (
     <div className={styles.detailsPage}>
+      {/* ================= BREADCRUMBS ================= */}
+      <Breadcrumbs items={breadcrumbItems} />
+
       {/* ================= HERO SECTION ================= */}
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
@@ -2109,6 +2144,7 @@ const DetailsPage = () => {
                       ? styles.primaryButton
                       : styles.secondaryButton
                   }`}
+                  onClick={() => { window.location.href = btn.variant === "primary" ? "/book" : "/treatments"; }}
                 >
                   {btn.text}
                 </button>
@@ -2204,7 +2240,7 @@ const DetailsPage = () => {
           <input type="date" className={styles.formInput} />
           <input type="time" className={styles.formInput} />
 
-          <button className={styles.bookButton}>BOOK NOW</button>
+          <button className={styles.bookButton} onClick={() => { window.location.href = "/book"; }}>BOOK NOW</button>
         </form>
       </section>
     </div>

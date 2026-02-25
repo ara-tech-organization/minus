@@ -101,14 +101,14 @@ const HolisticApproach = () => {
             ))}
           </div>
 
-          <button
+          {/* <button
             className={styles.ctaButton}
             onClick={() => {
               window.location.href = "/#treatments";
             }}
           >
             Learn More
-          </button>
+          </button> */}
         </div>
 
         <div className={styles.rightSection}>

@@ -15,10 +15,10 @@ const ConsultationCTA = () => {
         <button
           className={styles.ctaButton}
           onClick={() => {
-            window.location.href = "/#contact";
+            window.location.href = "/book";
           }}
         >
-          <span className={styles.calendarIcon}>📅</span>
+          <span className={styles.calendarIcon}></span>
           Book Consultation
         </button>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./DoctorProfile.module.css";
 import { useNavigate } from "react-router-dom";
+import doctorImg from "../../assets/doctor-raj.png";
 
 const DoctorProfile = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const DoctorProfile = () => {
         <div className={styles.imageSection}>
           <div className={styles.imageWrapper}>
             <img
-              src="src\assets\doctor-raj.png"
+              src={doctorImg}
               alt="Dr. Raj Palaniappan"
               className={styles.doctorImage}
             />

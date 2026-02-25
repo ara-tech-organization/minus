@@ -1,0 +1,204 @@
+.section {
+  background: #ffffff;
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.categoryBlock {
+  margin-bottom: 56px;
+  scroll-margin-top: 100px;
+}
+
+.categoryBlock:last-child {
+  margin-bottom: 0;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0ede8;
+}
+
+.categoryHeading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.viewMoreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.viewMoreButton:hover {
+  background: #000000;
+  gap: 12px;
+  transform: translateX(-2px);
+}
+
+.viewMoreArrow {
+  transition: transform 0.3s ease;
+}
+
+.viewMoreButton:hover .viewMoreArrow {
+  transform: translateX(3px);
+}
+
+.treatmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.treatmentCard {
+  background: #fafafa;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.treatmentCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.treatmentImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.treatmentCard:hover .treatmentImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 24px 20px;
+}
+
+.treatmentTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.treatmentDescription {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.learnMore:hover {
+  gap: 10px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.learnMore:hover .arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 1024px) {
+  .treatmentsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 16px;
+  }
+
+  .treatmentsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .categoryHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .categoryHeading {
+    font-size: 1.2rem;
+  }
+
+  .viewMoreButton {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .categoryBlock {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatmentsGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

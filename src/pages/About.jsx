@@ -26,10 +26,10 @@ const About = () => {
       <div data-aos="fade-up" data-aos-delay="200">
         <MissionVision />
       </div>
-      <div data-aos="fade-left" data-aos-delay="300">
+      <div data-aos="fade-up" data-aos-delay="300">
         <SpecialtyAreas />
       </div>
-      <div data-aos="zoom-in" data-aos-delay="400">
+      <div data-aos="fade-down" data-aos-delay="400">
         <PatientTestimonials />
       </div>
       <div data-aos="fade-up" data-aos-delay="500">

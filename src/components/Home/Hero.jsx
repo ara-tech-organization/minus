@@ -30,7 +30,7 @@ const Hero = () => {
           </p>
 
           <div className={styles.ctaWrapper}>
-            <button className={styles.ctaButton}>
+            <button className={styles.ctaButton} onClick={() => { window.location.href = "/book"; }}>
               <span>Book a Consultation</span>
               <svg
                 className={styles.arrow}

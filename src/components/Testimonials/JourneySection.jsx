@@ -16,11 +16,11 @@ const JourneySection = () => {
         </p>
 
         <div className={styles.buttonGroup}>
-          <button className={`${styles.btn} ${styles.primaryBtn}`}>
+          <button className={`${styles.btn} ${styles.primaryBtn}`} onClick={() => { window.location.href = "/book"; }}>
             Book Consultation
           </button>
 
-          <button className={`${styles.btn} ${styles.outlineBtn}`}>
+          <button className={`${styles.btn} ${styles.outlineBtn}`} onClick={() => { window.location.href = "/treatments"; }}>
             View Treatments
           </button>
         </div>

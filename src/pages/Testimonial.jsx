@@ -21,10 +21,10 @@ const Testimonial = () => {
       <div data-aos="fade-up">
         <ClientSuccessHero />
       </div>
-      <div data-aos="fade-right" data-aos-delay="200">
+      <div data-aos="fade-up" data-aos-delay="200">
         <ClientJourneys />
       </div>
-      <div data-aos="zoom-in" data-aos-delay="300">
+      <div data-aos="fade-down" data-aos-delay="300">
         <ClientTestimonials />
       </div>
       <div data-aos="fade-up" data-aos-delay="400">

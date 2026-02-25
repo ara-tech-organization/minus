@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./ServicesSection.module.css";
-import BodyLiftImage from "@/assets/Body-lift.png";
-import LiposuctionImage from "@/assets/Liposuction.png";
-import InjectionImage from "@/assets/Injection.png";
+import BodyLiftImage from "@/assets/Body-Lift-Surgery.png";
+import CryoSculptImage from "@/assets/CryoSculpt.png";
+import InjectionImage from "@/assets/mini-invasive-2.png";
+import AbdominoplastyImage from "@/assets/Abdominoplasty.png";
 import { ArrowRightIcon } from "lucide-react";
 
 const ServicesSection = () => {
@@ -27,10 +28,11 @@ const ServicesSection = () => {
       title: "Body Lift Surgery",
       description:
         "Improve the shape and tone of your underlying tissue that supports skin and fat.",
+      href: "/treatment/body",
     },
     {
       id: 2,
-      image: LiposuctionImage,
+      image: CryoSculptImage,
       icon: (
         <svg
           width="24"
@@ -40,15 +42,15 @@ const ServicesSection = () => {
           stroke="currentColor"
           strokeWidth="2"
         >
-          <rect x="3" y="3" width="7" height="7" />
-          <rect x="14" y="3" width="7" height="7" />
-          <rect x="14" y="14" width="7" height="7" />
-          <rect x="3" y="14" width="7" height="7" />
+          <path d="M12 2L2 7l10 5 10-5-10-5z" />
+          <path d="M2 17l10 5 10-5" />
+          <path d="M2 12l10 5 10-5" />
         </svg>
       ),
-      title: "Liposuction",
+      title: "CryoSculpt",
       description:
-        "Precision contouring for stubborn areas that don't respond to diet and exercise.",
+        "If stubborn fat refuses to budge, despite your best efforts, it is time to introduce CryoSculpt.",
+      href: "/treatment/CryoSculpt",
     },
     {
       id: 3,
@@ -69,11 +71,12 @@ const ServicesSection = () => {
       ),
       title: "Injection Lipolysis",
       description:
-        "Non-surgical chemical fat reduction treatments for a more defined silhouette.",
+        "Minimally invasive chemical fat reduction for targeted areas.",
+      href: "/treatment/Injection",
     },
     {
       id: 4,
-      image: InjectionImage,
+      image: AbdominoplastyImage,
       icon: (
         <svg
           width="24"
@@ -83,14 +86,16 @@ const ServicesSection = () => {
           stroke="currentColor"
           strokeWidth="2"
         >
-          <rect x="9" y="2" width="6" height="20" rx="1" />
-          <circle cx="12" cy="12" r="3" />
-          <path d="M12 2v4M12 18v4" />
+          <path d="M12 2L2 7l10 5 10-5-10-5z" />
+          <path d="M2 17l10 5 10-5" />
+          <path d="M2 12l10 5 10-5" />
+          <circle cx="12" cy="12" r="2" />
         </svg>
       ),
-      title: "Injection Lipolysis",
+      title: "Abdominoplasty",
       description:
-        "Non-surgical chemical fat reduction treatments for a more defined silhouette.",
+        "Surgical removal of excess skin and fat from the abdomen for a flatter appearance.",
+      href: "/treatment/abdominoplasty",
     },
   ];
 
@@ -98,7 +103,7 @@ const ServicesSection = () => {
     <section className={styles.servicessection}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Our Signature Services</h2>
+          <h2 className={styles.title}>Our Signature Treatments</h2>
           <p className={styles.subtitle}>
             Expertly delivered clinical treatments designed for targeted results
             and long-term wellness.
@@ -129,7 +134,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
 
-                <a href="#" className={styles.learnmore}>
+                <a href={service.href} className={styles.learnmore}>
                   Learn more
                   <svg
                     width="16"
@@ -153,8 +158,8 @@ const ServicesSection = () => {
         </div>
         {/* VIEW MORE BUTTON */}
         <div className={styles.viewMoreWrapper}>
-          <a href="/minus/#testimonial" className={styles.viewMoreBtn}>
-            View More Services
+          <a href="/treatments" className={styles.viewMoreBtn}>
+            View More Treatments
             <svg
               className={styles.viewMoreArrow}
               width="16"

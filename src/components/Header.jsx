@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,12 +26,13 @@ const Header = () => {
     { label: "Treatments", href: "/treatments" },
     { label: "Testimonials", href: "/testimonial" },
     { label: "Specialists", href: "/specialists" },
-    { label: "Supplements", href: "/supplements" },
-    { label: "Contact", href: "/contact" },
   ];
 
   const isActive = (href) => {
     if (href === "/") return location.pathname === "/" || location.pathname === "/home";
+    if (href === "/treatments") {
+      return location.pathname === href || location.pathname.startsWith("/treatment/");
+    }
     return location.pathname === href;
   };
 
@@ -64,9 +65,9 @@ const Header = () => {
         {/* CTA Button */}
         <button
           className={styles.ctaButton}
-          onClick={() => (window.location.href = "/contact")}
+          onClick={() => (window.location.href = "/book")}
         >
-          <span>Get Started</span>
+          <span>Book an Appointment</span>
           <svg
             className={styles.ctaArrow}
             viewBox="0 0 24 24"
@@ -122,10 +123,11 @@ const Header = () => {
           <button
             className={styles.mobileCtaButton}
             onClick={() => {
-              window.location.href = "/contact";
+              setIsMenuOpen(false);
+              window.location.href = "/book";
             }}
           >
-            Get Started
+            Book an Appointment
           </button>
         </nav>
       </div>

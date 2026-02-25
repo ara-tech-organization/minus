@@ -44,7 +44,7 @@ const NutritionistLanding = () => {
               </div>
               <div className="contactItem">
                 <span className="icon">✉️</span>
-                <span>info@minusclinic.com</span>
+                <span>velachery@minusclinic.com</span>
               </div>
             </div>
             <div className="socialLinks">

@@ -24,7 +24,7 @@ const Hero = () => {
           <button
             className={styles.primaryBtn}
             onClick={() => {
-              window.location.href = "/#contact";
+              window.location.href = "/book";
             }}
           >
             Book an Appointment
@@ -33,7 +33,7 @@ const Hero = () => {
           <button
             className={styles.secondaryBtn}
             onClick={() => {
-              window.location.href = "/#treatments";
+              window.location.href = "/treatments";
             }}
           >
             Learn More <span className={styles.arrow}>→</span>

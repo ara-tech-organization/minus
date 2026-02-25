@@ -85,7 +85,7 @@ const MinimallyInvasive = () => {
               options.
             </p>
           </div>
-          <button className={styles.compareBtn}>
+          <button className={styles.compareBtn} onClick={() => { document.getElementById('compare')?.scrollIntoView({ behavior: 'smooth' }); }}>
             Compare Options <span className={styles.arrow}>→</span>
           </button>
         </div>

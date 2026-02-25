@@ -48,15 +48,9 @@ const ClientJourneys = () => {
   ];
 
   return (
-    <section className={styles.section}>
+    <section id="stories" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>Client Journeys</h2>
-          <p className={styles.subtitle}>
-            Hear directly from our clients about their experiences and
-            life-changing results.
-          </p>
-        </div>
+        {/* Heading moved to ClientTestimonials component */}
         {/* <div className={styles.grid}>
           {videos.map((video, index) => (
             <VideoCard

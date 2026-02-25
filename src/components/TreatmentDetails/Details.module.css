@@ -10,12 +10,15 @@
      color: #333;
  }
 
+ .detailsPage {
+     padding-top: 100px;
+ }
+
  /* ============= HERO SECTION ============= */
  .heroSection {
      background: linear-gradient(135deg, #f5f0ed 0%, #ffffff 100%);
      padding: 60px 20px;
      animation: fadeIn 0.8s ease-in;
-    margin-top: 100px;
  }
 
  .heroContent {

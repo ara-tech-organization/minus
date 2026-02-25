@@ -3,10 +3,10 @@ import styles from "./TransformationSteps.module.css";
 
 const TransformationSteps = () => {
   const steps = [
-    { id: 1, text: "EXPLORE TREATMENT PROTOCOLS" },
-    { id: 2, text: "CONSULT WITH A SPECIALIST" },
-    { id: 3, text: "SCHEDULE YOUR INITIAL ASSESSMENT" },
-    { id: 4, text: "REVIEW OUR FACILITY" },
+    { id: 1, text: "EXPLORE TREATMENT PROTOCOLS", href: "/treatments" },
+    { id: 2, text: "CONSULT WITH A SPECIALIST", href: "/specialists" },
+    { id: 3, text: "SCHEDULE YOUR INITIAL ASSESSMENT", href: "/book" },
+    { id: 4, text: "REVIEW OUR FACILITY", href: "/about" },
   ];
 
   return (
@@ -22,6 +22,7 @@ const TransformationSteps = () => {
               key={step.id}
               className={styles.stepButton}
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => { window.location.href = step.href; }}
             >
               {step.text}
             </button>

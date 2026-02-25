@@ -136,7 +136,14 @@ const ClientTestimonials = () => {
   );
 
   return (
-    <div className={styles.testimonialsSection}>
+    <div id="reviews" className={styles.testimonialsSection}>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Client Journeys</h2>
+        <p className={styles.subtitle}>
+          Hear directly from our clients about their experiences and
+          life-changing results.
+        </p>
+      </div>
       <div className={styles.grid}>
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className={styles.gridItem}>

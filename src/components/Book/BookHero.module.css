@@ -1,0 +1,374 @@
+.heroWrapper {
+  padding: 160px 20px 80px;
+  background: #1a1a1a;
+}
+
+.heroContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content */
+.content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.headline {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.subheadline {
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 20px;
+}
+
+.mobilePhone {
+  display: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: #ffffff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobilePhone:hover {
+  background: #f5f5f5;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.mobilePhone:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.highlightItem {
+  display: flex;
+  
+  align-items: start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.highlightIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Right Form Card */
+.formCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px 28px;
+  animation: fadeInUp 1s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.formTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.formSubtitle {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  color: #1a1a1a;
+  transition: border-color 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #1a1a1a;
+  background: #ffffff;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  padding: 13px 40px 13px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  color: #1a1a1a;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.select:focus {
+  border-color: #1a1a1a;
+  background: #ffffff;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+.captchaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.captchaLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.captchaWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.captchaCode {
+  flex: 1;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e5e5e5 100%);
+  border: 2px solid #d0d0d0;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  letter-spacing: 4px;
+  color: #1a1a1a;
+  text-align: center;
+  user-select: none;
+}
+
+.reloadButton {
+  padding: 12px;
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.reloadButton:hover {
+  background: #ffffff;
+  border-color: #1a1a1a;
+  transform: rotate(90deg);
+}
+
+.reloadButton:active {
+  transform: rotate(180deg);
+}
+
+.captchaInput {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.captchaInput:focus {
+  border-color: #1a1a1a;
+  background: #ffffff;
+}
+
+.captchaInput::placeholder {
+  color: #aaa;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.errorMessage {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.successMessage {
+  color: #2e7d32;
+  font-size: 0.85rem;
+  margin: 0;
+  background: #e8f5e9;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 15px;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.submitButton:disabled {
+  background: #888888;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+.submitButton:disabled:hover {
+  background: #888888;
+  transform: none;
+  box-shadow: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .heroContainer {
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .heroWrapper {
+    padding: 130px 16px 48px;
+  }
+
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .mobilePhone {
+    display: inline-block;
+  }
+
+  .highlights {
+    align-items: center;
+  }
+
+  .formCard {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroWrapper {
+    padding: 120px 14px 40px;
+  }
+
+  .formCard {
+    padding: 28px 20px;
+  }
+}

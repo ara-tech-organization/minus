@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import TreatmentsHero from "../components/Treatments/TreatmentsHero";
+import StickyTabs from "../components/Treatments/StickyTabs";
 import NonInvasiveTreatments from "../components/Treatments/NonInvasiveTreatments";
 import MinimallyInvasive from "../components/Treatments/MinimallyInvasive";
 import SurgicalProcedures from "../components/Treatments/SurgicalProcedures";
 import CompareProcedures from "../components/Treatments/CompareProcedures";
 
 const Treatment = () => {
+  const location = useLocation();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -17,24 +21,28 @@ const Treatment = () => {
     });
   }, []);
 
-  return (
-    <div id="treatments">
-      
-      <TreatmentsHero />
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+    }
+  }, [location]);
 
-      <div data-aos="fade-up" data-aos-delay="200">
-        <NonInvasiveTreatments />
-      </div>
-      <div data-aos="fade-down" data-aos-delay="300">
-        <MinimallyInvasive />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="400">
-        <SurgicalProcedures />
-      </div>
-      <div data-aos="fade-down" data-aos-delay="500">
-        <CompareProcedures />
-      </div>
-    </div>
+  return (
+    <>
+      <TreatmentsHero />
+      <StickyTabs />
+
+      <NonInvasiveTreatments />
+      <MinimallyInvasive />
+      <SurgicalProcedures />
+      <CompareProcedures />
+    </>
   );
 };
 
