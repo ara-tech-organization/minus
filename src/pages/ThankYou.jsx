@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ThankYou.module.css";
 
 const ThankYou = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Google Ads conversion tracking
+    if (typeof gtag === "function") {
+      gtag("event", "conversion", {
+        send_to: "AW-17882308620/pyC4CMns9-obEIzA-c5C",
+        value: 1000.0,
+        currency: "INR",
+      });
+    }
+  }, []);
 
   return (
     <div className={styles.container}>
